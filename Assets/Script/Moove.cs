@@ -33,7 +33,18 @@ public class Moove : MonoBehaviour
     public int healch;
     public int damage;
     public Vector2 damagerPosition;
-
+    public float damageTime;
+    public float ghostTime;
+    public bool runDisabler;
+    public float kickForce;
+    
+    private void GhostTimer()
+    {
+        if(damage != 0)
+        {
+            
+        }
+    }
     private void Damage()
     {
         if (damage != 0)
@@ -42,13 +53,13 @@ public class Moove : MonoBehaviour
             damage = 0;
             if (damagerPosition.x > trans.position.x)
             {
-                rb.linearVelocity = new Vector2(0, 0);
-                rb.AddForce(new Vector2(jumpForce, jumpForce), ForceMode2D.Impulse);
+                rb.linearVelocity = new Vector2(rb.linearVelocityX, 0);
+                rb.AddForce(new Vector2(-kickForce, kickForce), ForceMode2D.Impulse);
             }
-            else if (damagerPosition.x > trans.position.x)
+            else if (damagerPosition.x < trans.position.x)
             {
-                rb.linearVelocity = new Vector2(0, 0);
-                rb.AddForce(new Vector2(-jumpForce, jumpForce), ForceMode2D.Impulse);
+                rb.linearVelocity = new Vector2(rb.linearVelocityX, 0);
+                rb.AddForce(new Vector2(kickForce, kickForce), ForceMode2D.Impulse);
             }
 
         }
@@ -117,22 +128,25 @@ public class Moove : MonoBehaviour
     }
     private void Run()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (runDisabler == false)
         {
-            rb.AddForce(Vector2.left * moveSpeed, ForceMode2D.Impulse);
-            if (isGrounded == true)
-            {
-                animator.SetInteger("run", 1);
-            }
-            if (isFacingRight == true)
-            {
-                isFacingRight = false;
 
-                Flip();
+            if (Input.GetKey(KeyCode.A))
+            {
+                rb.AddForce(Vector2.left * moveSpeed, ForceMode2D.Impulse);
+                if (isGrounded == true)
+                {
+                    animator.SetInteger("run", 1);
+                }
+                if (isFacingRight == true)
+                {
+                    isFacingRight = false;
+
+                    Flip();
+                }
             }
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
+            else if (Input.GetKey(KeyCode.D))
+            {
                 rb.AddForce(Vector2.right * moveSpeed, ForceMode2D.Impulse);
                 animator.SetInteger("run", 1);
                 if (isGrounded == true)
@@ -145,6 +159,7 @@ public class Moove : MonoBehaviour
 
                     Flip();
                 }
+            }
         }
     }
     private void maxVelocity()
@@ -171,6 +186,8 @@ public class Moove : MonoBehaviour
     {
         healch = 3;
         damage = 0;
+        ghostTime = 1;
+        kickForce = 200;
         damagerPosition = Vector3.zero;
         CheckGrounds = GetComponentInChildren<CheckGround>();
         rb = GetComponent<Rigidbody2D>();

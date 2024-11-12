@@ -8,6 +8,8 @@ public class thorns : MonoBehaviour
     public int thornsDamage;
     public Vector2 thornsDamagePosition;
 
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
@@ -16,6 +18,9 @@ public class thorns : MonoBehaviour
             Debug.Log("rhorns");
             mooveScript.damage = thornsDamage;
             mooveScript.damagerPosition = thornsDamagePosition;
+
+            mooveScript.damageTime = Time.time;
+            //mooveScript.runDisabler = true;
         }
     }
 
