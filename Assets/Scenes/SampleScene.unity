@@ -173,11 +173,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 211741775}
+  - component: {fileID: 211741779}
   - component: {fileID: 211741774}
   - component: {fileID: 211741772}
   - component: {fileID: 211741778}
   - component: {fileID: 211741780}
-  - component: {fileID: 211741779}
   m_Layer: 0
   m_Name: Heroe
   m_TagString: HeroeTag
@@ -213,10 +213,17 @@ MonoBehaviour:
   reservTimeJump: 0.05
   reservTimeJumpPermisison: 0
   isJump: 0
+  damageSwitcher: 0
   names: asdadasdasd
   healch: 0
   damage: 0
   damagerPosition: {x: 0, y: 0}
+  damageTime: 0
+  ghostTimer: 0
+  ghostTime: 0
+  runDisabler: 0
+  kickForce: 0
+  alpha: 0
 --- !u!50 &211741774
 Rigidbody2D:
   serializedVersion: 5

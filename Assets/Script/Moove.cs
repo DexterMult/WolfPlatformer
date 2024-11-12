@@ -5,6 +5,7 @@ public class Moove : MonoBehaviour
 {
     [Header("Анимация")]
     public Animator animator;
+    private SpriteRenderer spriteRenderer;
     [Header("Позиция")]
     public float previousYPosition;
     public Transform trans;
@@ -29,20 +30,49 @@ public class Moove : MonoBehaviour
     public bool isJump;
 
     [Header("Урон")]
+    public bool damageSwitcher;
     public string names = "asdadasdasd";
     public int healch;
     public int damage;
     public Vector2 damagerPosition;
     public float damageTime;
+    public float ghostTimer;
     public float ghostTime;
     public bool runDisabler;
     public float kickForce;
-    
+    public float alpha;
+
+    public void SetColor(Color color)
+    {
+        
+        spriteRenderer.color = color; // Установка нового цвета
+    }
+
+
+    public void SetTransparency(float alpha)
+    {
+        
+        Color color = spriteRenderer.color;
+        color.a = Mathf.Clamp01(alpha); // Убедитесь, что значение находится в диапазоне от 0 до 1
+        spriteRenderer.color = color;
+    }
+
     private void GhostTimer()
     {
-        if(damage != 0)
+
+        if (damageSwitcher == true)
         {
-            
+            alpha = 0.5f;
+            SetColor(new Color(1f, 0f, 0f, alpha));
+            ghostTimer = Time.time - damageTime;
+
+            if (ghostTimer >= ghostTime)
+            {
+                SetColor(new Color(1f, 1f, 1f, 1));
+                damageSwitcher = false;
+                runDisabler = false;
+                alpha = 1;
+            }
         }
     }
     private void Damage()
@@ -184,15 +214,18 @@ public class Moove : MonoBehaviour
     }
     void Start()
     {
+        alpha = 0.7f;
+        damageSwitcher = false;
         healch = 3;
         damage = 0;
-        ghostTime = 1;
-        kickForce = 200;
+        ghostTime = 0.3f;
+        kickForce = 50;
         damagerPosition = Vector3.zero;
         CheckGrounds = GetComponentInChildren<CheckGround>();
         rb = GetComponent<Rigidbody2D>();
         previousYPosition = rb.position.y;
-
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        
     }
 
     // Update is called once per frame
@@ -206,6 +239,7 @@ public class Moove : MonoBehaviour
         JumpAnim();
         ZYOn();
         Damage();
+        GhostTimer();
     }
 
 }

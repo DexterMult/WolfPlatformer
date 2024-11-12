@@ -20,7 +20,8 @@ public class thorns : MonoBehaviour
             mooveScript.damagerPosition = thornsDamagePosition;
 
             mooveScript.damageTime = Time.time;
-            //mooveScript.runDisabler = true;
+            mooveScript.runDisabler = true;
+            mooveScript.damageSwitcher = true;
         }
     }
 
