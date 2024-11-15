@@ -3,7 +3,7 @@ using UnityEngine;
 public class CheckGround : MonoBehaviour
 {
     public Transform trans;
-
+    public Object Heroe;
     Moove moveScript;
     public int jumpCounter;
     public bool isGround;
@@ -55,7 +55,6 @@ public class CheckGround : MonoBehaviour
     }
     void Start()
     {
-
         moveScript = GetComponentInParent<Moove>();
     }
 

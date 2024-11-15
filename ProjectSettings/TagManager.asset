@@ -6,15 +6,17 @@ TagManager:
   tags:
   - Ground0
   - HeroeTag
+  - LegsHeroeTag
+  - ThornsTag
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - IgnoreCollision
   - Water
   - UI
-  - 
-  - 
+  - Heroe
+  - GroundLayer
   - 
   - 
   - 

@@ -31,7 +31,7 @@ public class Moove : MonoBehaviour
 
     [Header("Урон")]
     public bool damageSwitcher;
-    public string names = "asdadasdasd";
+    public string names = "HeroeMan";
     public int healch;
     public int damage;
     public Vector2 damagerPosition;
@@ -102,7 +102,6 @@ public class Moove : MonoBehaviour
             isJump = true;
             isGrounded = false;
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-            Debug.Log("Прыг1");
         }
         if (Input.GetKeyDown(KeyCode.Space) && jumpCounter == 1 && reservTimeJumpPermisison == true)
         {
@@ -113,7 +112,6 @@ public class Moove : MonoBehaviour
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             reservTimeJumpPermisison = false;
             jumpCounter = 0;
-            Debug.Log("Прыг2");
         }
 
         if (Input.GetKeyUp(KeyCode.Space) && isGrounded == false && jumpCounter == 0)

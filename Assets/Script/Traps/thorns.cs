@@ -12,10 +12,10 @@ public class thorns : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
-        if (collision.gameObject.CompareTag("HeroeTag"))
+        Collider2D collider = collision.collider;
+
+        if (collider.name == "Legs")
         {
-            Debug.Log("rhorns");
             mooveScript.damage = thornsDamage;
             mooveScript.damagerPosition = thornsDamagePosition;
 
@@ -40,6 +40,5 @@ public class thorns : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(mooveScript.names);
     }
 }
