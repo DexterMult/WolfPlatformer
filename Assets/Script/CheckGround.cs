@@ -8,6 +8,7 @@ public class CheckGround : MonoBehaviour
     public int jumpCounter;
     public bool isGround;
     public float timeGroundOut;
+    public float raycastDistance;
 
     public Rigidbody2D rigidbodys;
     private void OnCollisionEnter2D(Collision2D collision)
@@ -38,6 +39,29 @@ public class CheckGround : MonoBehaviour
             }
         }
     }
+    private void RaycastLeftRightChecker()
+    {
+        RaycastHit2D[] hitsLeft = Physics2D.RaycastAll(trans.position, Vector2.down, raycastDistance);
+        Debug.DrawRay(trans.position, Vector2.down * raycastDistance, Color.red);
+        foreach (RaycastHit2D hit in hitsLeft)
+        {
+            if (hit.collider != null)
+            {
+                GameObject hitObject = hit.collider.gameObject;
+                string hitObjectTag = hitObject.tag;
+                if (hitObjectTag == "ThornsTag")
+                {
+                    Debug.Log("ThornsTagConatact");
+                    isGround = true;
+                    jumpCounter = 0;
+                    getGround();
+                    getCounter();
+                    moveScript.reservTimeJumpPermisison = false;
+                    moveScript.isJump = false;
+                }
+            }
+        }
+    }
 
     public float GetTime()
     {
@@ -56,10 +80,11 @@ public class CheckGround : MonoBehaviour
     void Start()
     {
         moveScript = GetComponentInParent<Moove>();
+        raycastDistance = 1.2f;
     }
 
     void Update()
     {
-
+        RaycastLeftRightChecker();
     }
 }

@@ -3,36 +3,48 @@
   "WorkspaceRootPath": "D:\\unity6\\platformer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|d:\\unity6\\platformer\\assets\\script\\enemy\\mushroom\\moovemushroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemy\\mushroom\\moovemushroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|d:\\unity6\\platformer\\assets\\script\\bonus\\bonusmov.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bonus\\bonusmov.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\enemy\\mushroom\\raycastleftrightdetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemy\\mushroom\\raycastleftrightdetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\heroelegs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\heroelegs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\checkground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|d:\\unity6\\platformer\\assets\\script\\checkground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\checkground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\enemy\\ienemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemy\\ienemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\traps\\thorns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\traps\\thorns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\legsatack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\legsatack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\moove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\moove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\traps\\itrapable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\traps\\itrapable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\enemy\\mushroom\\raycastleftrightdetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemy\\mushroom\\raycastleftrightdetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\cat_scene_script.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\cat_scene_script.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\textpanelscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\textpanelscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\traps\\thorns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\traps\\thorns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\enemy\\mushroom\\moovemushroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemy\\mushroom\\moovemushroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\enemy\\mushroom\\atackmushroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemy\\mushroom\\atackmushroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,105 +54,141 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RaycastLeftRightDetection.cs",
-              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\Enemy\\Mushroom\\RaycastLeftRightDetection.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\Mushroom\\RaycastLeftRightDetection.cs",
-              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\Enemy\\Mushroom\\RaycastLeftRightDetection.cs",
-              "RelativeToolTip": "Assets\\Script\\Enemy\\Mushroom\\RaycastLeftRightDetection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T16:34:54.704Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MooveMushroom.cs",
-              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\Enemy\\Mushroom\\MooveMushroom.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\Mushroom\\MooveMushroom.cs",
-              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\Enemy\\Mushroom\\MooveMushroom.cs",
-              "RelativeToolTip": "Assets\\Script\\Enemy\\Mushroom\\MooveMushroom.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAkwFcAAAA5AAAAAAAAAA==",
+              "Title": "BonusMov.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\Bonus\\BonusMov.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Bonus\\BonusMov.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\Bonus\\BonusMov.cs",
+              "RelativeToolTip": "Assets\\Script\\Bonus\\BonusMov.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAYAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T12:04:18.706Z",
+              "WhenOpened": "2024-11-20T20:59:09.673Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IEnemy.cs",
-              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\Enemy\\IEnemy.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\IEnemy.cs",
-              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\Enemy\\IEnemy.cs",
-              "RelativeToolTip": "Assets\\Script\\Enemy\\IEnemy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T12:12:08.745Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ITrapable.cs",
-              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\Traps\\ITrapable.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Traps\\ITrapable.cs",
-              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\Traps\\ITrapable.cs",
-              "RelativeToolTip": "Assets\\Script\\Traps\\ITrapable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T23:48:46.518Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "thorns.cs",
-              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\Traps\\thorns.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Traps\\thorns.cs",
-              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\Traps\\thorns.cs",
-              "RelativeToolTip": "Assets\\Script\\Traps\\thorns.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Title": "cat_scene_script.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\cat_scene_script.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\cat_scene_script.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\cat_scene_script.cs",
+              "RelativeToolTip": "Assets\\Script\\cat_scene_script.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T18:00:48.625Z"
+              "WhenOpened": "2024-11-18T19:34:03.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "textPanelScript.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\textPanelScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\textPanelScript.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\textPanelScript.cs",
+              "RelativeToolTip": "Assets\\Script\\textPanelScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T19:01:29.2Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "HeroeLegs.cs",
-              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\HeroeLegs.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\HeroeLegs.cs",
-              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\HeroeLegs.cs",
-              "RelativeToolTip": "Assets\\Script\\HeroeLegs.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAWAAAAAAAAAA==",
+              "Title": "LegsAtack.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\LegsAtack.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\LegsAtack.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\LegsAtack.cs",
+              "RelativeToolTip": "Assets\\Script\\LegsAtack.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T23:31:31.522Z"
+              "WhenOpened": "2024-11-17T17:41:26.231Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "CheckGround.cs",
               "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\CheckGround.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CheckGround.cs",
               "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\CheckGround.cs",
               "RelativeToolTip": "Assets\\Script\\CheckGround.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAowBkAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAwwFIAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T17:52:53.947Z"
+              "WhenOpened": "2024-11-03T17:52:53.947Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
+              "Title": "CameraFollow.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\CameraFollow.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\CameraFollow.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\CameraFollow.cs",
+              "RelativeToolTip": "Assets\\Script\\CameraFollow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T16:26:59.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AtackMushroom.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\Enemy\\Mushroom\\AtackMushroom.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\Mushroom\\AtackMushroom.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\Enemy\\Mushroom\\AtackMushroom.cs",
+              "RelativeToolTip": "Assets\\Script\\Enemy\\Mushroom\\AtackMushroom.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwB4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T12:42:19.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RaycastLeftRightDetection.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\Enemy\\Mushroom\\RaycastLeftRightDetection.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\Mushroom\\RaycastLeftRightDetection.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\Enemy\\Mushroom\\RaycastLeftRightDetection.cs",
+              "RelativeToolTip": "Assets\\Script\\Enemy\\Mushroom\\RaycastLeftRightDetection.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwDoAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T16:34:54.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Moove.cs",
               "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\Moove.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Moove.cs",
               "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\Moove.cs",
               "RelativeToolTip": "Assets\\Script\\Moove.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAwMYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAqwLcAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T18:19:03.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "thorns.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\Traps\\thorns.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Traps\\thorns.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\Traps\\thorns.cs",
+              "RelativeToolTip": "Assets\\Script\\Traps\\thorns.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwDEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T18:00:48.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MooveMushroom.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\Enemy\\Mushroom\\MooveMushroom.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\Mushroom\\MooveMushroom.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\Enemy\\Mushroom\\MooveMushroom.cs",
+              "RelativeToolTip": "Assets\\Script\\Enemy\\Mushroom\\MooveMushroom.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T12:04:18.706Z"
             }
           ]
         }

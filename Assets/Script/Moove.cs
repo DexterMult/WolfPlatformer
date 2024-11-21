@@ -10,6 +10,7 @@ public class Moove : MonoBehaviour
     public float previousYPosition;
     public Transform trans;
 
+    public bool death;
     public float lastYpos;
 
     private CheckGround CheckGrounds;
@@ -19,6 +20,7 @@ public class Moove : MonoBehaviour
     public float jumpForce;
     public bool isGrounded;
     public float maxVelocityX;
+    public float maxVelocityY;
     public int jumpCounter = 0;
 
     public float maxDistance = 50;
@@ -36,29 +38,39 @@ public class Moove : MonoBehaviour
     public int damage;
     public Vector2 damagerPosition;
     public float damageTime;
+    public bool damagePermission;
     public float ghostTimer;
     public float ghostTime;
+    public float reservGhostTime;
     public bool runDisabler;
     public float kickForce;
     public float alpha;
-
+    public bool heroeAtack;
+    public float atackJumpForce;
+    private void HeroeAtack()
+    {
+        if (heroeAtack == true)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocityX, 0);
+            rb.AddForce(new Vector2(trans.position.x, atackJumpForce), ForceMode2D.Impulse);
+            heroeAtack = false;
+        }
+    }
     public void SetColor(Color color)
     {
-        
+
         spriteRenderer.color = color; // Установка нового цвета
     }
-
-
     public void SetTransparency(float alpha)
     {
-        
+
         Color color = spriteRenderer.color;
         color.a = Mathf.Clamp01(alpha); // Убедитесь, что значение находится в диапазоне от 0 до 1
         spriteRenderer.color = color;
     }
-
     private void GhostTimer()
     {
+        
 
         if (damageSwitcher == true)
         {
@@ -66,30 +78,46 @@ public class Moove : MonoBehaviour
             SetColor(new Color(1f, 0f, 0f, alpha));
             ghostTimer = Time.time - damageTime;
 
-            if (ghostTimer >= ghostTime)
+            if (reservGhostTime <= ghostTimer)
             {
                 SetColor(new Color(1f, 1f, 1f, 1));
-                damageSwitcher = false;
-                runDisabler = false;
                 alpha = 1;
+                damageSwitcher = false;
+                return;
+            }
+            else if (ghostTimer >= ghostTime)
+            {
+                runDisabler = false;
             }
         }
     }
     private void Damage()
     {
+
+        if (damagePermission == false) {
+            float Timerok = Time.time - (reservGhostTime + damageTime);
+            if(Timerok >= reservGhostTime)
+            {
+                damagePermission = true;
+            }
+        }
+
         if (damage != 0)
         {
+            damagePermission = false;
             healch = healch - damage;
             damage = 0;
             if (damagerPosition.x > trans.position.x)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocityX, 0);
                 rb.AddForce(new Vector2(-kickForce, kickForce), ForceMode2D.Impulse);
+                Debug.Log("Right");
             }
             else if (damagerPosition.x < trans.position.x)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocityX, 0);
-                rb.AddForce(new Vector2(kickForce, kickForce), ForceMode2D.Impulse);
+                rb.AddForce(new Vector2(+kickForce, kickForce), ForceMode2D.Impulse);
+                Debug.Log("Left");
             }
 
         }
@@ -127,7 +155,6 @@ public class Moove : MonoBehaviour
         }
 
     }
-
     private void JumpAnim()
     {
 
@@ -156,8 +183,33 @@ public class Moove : MonoBehaviour
     }
     private void Run()
     {
+        float runSpeed = 0.04f;
         if (runDisabler == false)
         {
+            if (Input.GetKeyUp(KeyCode.D) && isGrounded == false)
+            {
+                rb.linearVelocity = new Vector2(0, rb.linearVelocityY);
+                trans.position = new Vector2(transform.position.x + runSpeed, transform.position.y);
+                if (isFacingRight == false)
+                {
+                    isFacingRight = true;
+
+                    Flip();
+                }
+                return;
+            }
+            else if (Input.GetKeyUp(KeyCode.A) && isGrounded == false)
+            {
+                rb.linearVelocity = new Vector2(0, rb.linearVelocityY);
+                transform.position = new Vector2(transform.position.x - runSpeed, transform.position.y);
+                if (isFacingRight == true)
+                {
+                    isFacingRight = false;
+
+                    Flip();
+                }
+                return;
+            }
 
             if (Input.GetKey(KeyCode.A))
             {
@@ -192,18 +244,24 @@ public class Moove : MonoBehaviour
     }
     private void maxVelocity()
     {
-        if (Mathf.Abs(rb.linearVelocityX) > maxVelocityX && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
+        if (runDisabler == false)
         {
-            rb.linearVelocity = new Vector2(Mathf.Sign(rb.linearVelocityX) * maxVelocityX, rb.linearVelocityY);
+
+            if (Mathf.Abs(rb.linearVelocityX) > maxVelocityX && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
+            {
+                rb.linearVelocity = new Vector2(Mathf.Sign(rb.linearVelocityX) * maxVelocityX, rb.linearVelocityY);
+            }
+            if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && isGrounded == true)
+            {
+                rb.linearVelocity = Vector2.zero;
+                animator.SetInteger("run", -1);
+            }
         }
-        if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && isGrounded == true)
+        else if (isGrounded == false && maxVelocityY <= rb.linearVelocity.y)
         {
-            rb.linearVelocity = Vector2.zero;
-            animator.SetInteger("run", -1);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, maxVelocityY);
         }
     }
-
-
     void Flip()
     {
         Vector3 scale = transform.localScale;
@@ -212,18 +270,24 @@ public class Moove : MonoBehaviour
     }
     void Start()
     {
+        damagePermission = true;
+        damageTime = 0;
+        heroeAtack = false;
+        death = false;
         alpha = 0.7f;
         damageSwitcher = false;
         healch = 3;
         damage = 0;
         ghostTime = 0.3f;
+        reservGhostTime = 1f;
         kickForce = 50;
         damagerPosition = Vector3.zero;
         CheckGrounds = GetComponentInChildren<CheckGround>();
         rb = GetComponent<Rigidbody2D>();
         previousYPosition = rb.position.y;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        
+        maxVelocityY = 15;
+        atackJumpForce = 50f;
     }
 
     // Update is called once per frame
@@ -231,13 +295,14 @@ public class Moove : MonoBehaviour
     {
         timeFallPassed = Time.time - timeGroundOut;
         animator.SetBool("isground", isGrounded);
+        Damage();
         Run();
         maxVelocity();
         Jump();
         JumpAnim();
         ZYOn();
-        Damage();
         GhostTimer();
+        HeroeAtack();
     }
 
 }

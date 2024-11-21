@@ -2,19 +2,23 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public Transform player; // Персонаж
-    public Vector3 offset = new Vector3(0, 0, -10); // Смещение камеры
-
+    public Transform player;
+    public Vector3 offset = new Vector3(0, 0, -10);
+    public Vector3 heroeLastPosition;
+    public bool heroeDeath;
 
     void Start()
     {
-        
+        heroeDeath = false;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        transform.position = player.position + offset;
+        if (heroeDeath == false)
+        {
+            transform.position = player.position + offset;
+        }
+        else { transform.position = heroeLastPosition + offset; }
     }
 }
+

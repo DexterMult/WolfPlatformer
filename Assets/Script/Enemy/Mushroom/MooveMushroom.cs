@@ -26,19 +26,17 @@ public class MooveMushroom : MonoBehaviour, IEnemy
     public float EnemyMaxVelocityY => enemyMaxVelocityY;
     private string enemyMooveDirection;
     private bool checkGrounded;
-    private bool oneCollisionIgnored;
     public bool leftCollision;
     public bool rightCollision;
+
     bool CheckGrounded()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raycastDistance, groundLayer);
         Debug.DrawRay(EnemyTransform.position, Vector2.down * raycastDistance, Color.red);
         if (hit.collider != null)
         {
-            //Debug.Log("ЗЕМЛЯ: " + hit.distance);
             return true; // Персонаж стоит на земле
         }
-        //Debug.Log("ВОЗДУХ");
         return false; // Персонаж не стоит на земле
 
     }
@@ -46,28 +44,11 @@ public class MooveMushroom : MonoBehaviour, IEnemy
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //    //Перебор всех контактных точек
-        //    if (oneCollisionIgnored == false) { 
-        //    foreach (ContactPoint2D contact in collision.contacts)
-        //    {
-        //        //Отображение точки контакта в консоли
-        //        Debug.Log("Столкновение произошло в точке: " + contact.point);
-        //        //Здесь вы можете добавить свою логику для обработки столкновения
-        //        if (EnemyTransform.position.x < contact.point.x)
-        //        {
-        //            Debug.Log("Пошли влево");
-        //            enemyMooveDirection = "LEFT";
-        //        }
-        //        else if (EnemyTransform.position.x > contact.point.x)
-        //        {
-        //            enemyMooveDirection = "RIGHT";
-        //        }
-        //    }
-        //}
-        //    if (oneCollisionIgnored == true && collision.contacts != null)
-        //    {
-        //        oneCollisionIgnored = false;
-        //    }
+        Collider2D collider = collision.collider;
+        if (collider.name == "Legs")
+        {
+
+        }
     }
     private void DirectionSwitcher()
 
@@ -87,13 +68,11 @@ public class MooveMushroom : MonoBehaviour, IEnemy
         {
             EnemyRigidbody.linearVelocity = new Vector2(-2, 0);
             enemyMooveDirection = "LEFT";
-            Debug.Log("Свап");
         }
         else if (enemyMooveDirection == "LEFT" && checkGrounded == false)
         {
             EnemyRigidbody.linearVelocity = new Vector2(2, 0);
             enemyMooveDirection = "RIGHT";
-            Debug.Log("Свап");
         }
     }
     private void NoneSthopRun()
@@ -129,8 +108,7 @@ public class MooveMushroom : MonoBehaviour, IEnemy
     {
         leftCollision = false;
         rightCollision = false;
-        oneCollisionIgnored = true;
-        heroe = GameObject.Find("Heroe");
+        heroe = GameObject.Find("He roe");
         enemyTransform = GetComponent<Transform>();
         enemyRigidbody = GetComponent<Rigidbody2D>();
         enemyMooveDirection = "RIGHT";
@@ -139,7 +117,6 @@ public class MooveMushroom : MonoBehaviour, IEnemy
 
     void Update()
     {
-        //Debug.Log(checkGrounded);
         NoneSthopRun();
         MaxVelocity();
     }

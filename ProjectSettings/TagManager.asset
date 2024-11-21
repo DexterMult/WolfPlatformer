@@ -8,6 +8,8 @@ TagManager:
   - HeroeTag
   - LegsHeroeTag
   - ThornsTag
+  - EnemyTag
+  - BunTag
   layers:
   - Default
   - TransparentFX
