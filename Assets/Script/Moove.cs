@@ -32,6 +32,7 @@ public class Moove : MonoBehaviour
     public bool isJump;
 
     [Header("Урон")]
+    Healch Healch;
     public bool damageSwitcher;
     public string names = "HeroeMan";
     public int healch;
@@ -105,6 +106,7 @@ public class Moove : MonoBehaviour
         if (damage != 0)
         {
             damagePermission = false;
+            Healch.HitPoints = healch-damage;
             healch = healch - damage;
             damage = 0;
             if (damagerPosition.x > trans.position.x)
@@ -270,6 +272,7 @@ public class Moove : MonoBehaviour
     }
     void Start()
     {
+        Healch = GetComponent<Healch>();
         damagePermission = true;
         damageTime = 0;
         heroeAtack = false;

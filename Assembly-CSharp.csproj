@@ -62,7 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\CameraFollow.cs" />
+    <Compile Include="Assets\Script\Parallax\ParallaxBackground.cs" />
+    <Compile Include="Assets\Script\Parallax\ParallaxCamera.cs" />
     <Compile Include="Assets\Script\Enemy\Mushroom\AtackMushroom.cs" />
+    <Compile Include="Assets\Script\ManeMenu\SelectedLVL.cs" />
+    <Compile Include="Assets\Script\Parallax\ParallaxLayer.cs" />
+    <Compile Include="Assets\Script\ManeUI\Timer.cs" />
     <Compile Include="Assets\Script\Moove.cs" />
     <Compile Include="Assets\Script\Enemy\IEnemy.cs" />
     <Compile Include="Assets\Script\cat_scene_script.cs" />
@@ -71,10 +76,15 @@
     <Compile Include="Assets\Script\CheckGround.cs" />
     <Compile Include="Assets\Script\Enemy\Mushroom\MooveMushroom.cs" />
     <Compile Include="Assets\Script\LegsAtack.cs" />
+    <Compile Include="Assets\Script\ManeMenu\StartGameMenu.cs" />
+    <Compile Include="Assets\Script\ManeMenu\SceneLoader.cs" />
+    <Compile Include="Assets\Script\ManeUI\ButtonsSetting.cs" />
     <Compile Include="Assets\Script\BonusesChecker.cs" />
     <Compile Include="Assets\Script\Traps\ITrapable.cs" />
     <Compile Include="Assets\Script\Traps\thorns.cs" />
+    <Compile Include="Assets\Script\ManeMenu\ButtonsManeMenu.cs" />
     <Compile Include="Assets\Script\textPanelScript.cs" />
+    <Compile Include="Assets\Script\ManeUI\Healch.cs" />
     <Compile Include="Assets\Script\Enemy\Mushroom\RaycastLeftRightDetection.cs" />
     <Compile Include="Assets\Script\Death.cs" />
   </ItemGroup>
@@ -1130,6 +1140,10 @@
       <Project>{067E020A-F206-6723-C3ED-E82B4AEFFC14}</Project>
       <Name>Unity.2D.IK.Runtime</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Cinemachine.Editor.csproj">
+      <Project>{EB340FFC-6656-7ABB-3976-78E005315FBD}</Project>
+      <Name>Unity.Cinemachine.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.2D.SpriteShape.Runtime.csproj">
       <Project>{C0E4EE99-524D-3B70-765A-0572F615112B}</Project>
       <Name>Unity.2D.SpriteShape.Runtime</Name>
@@ -1170,6 +1184,10 @@
       <Project>{A4F8CCF8-7E8E-4359-C6C6-BA6706F0D9FD}</Project>
       <Name>Unity.Multiplayer.Center.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Splines.csproj">
+      <Project>{1873031B-146F-22D7-0EDF-6A897EA14E9A}</Project>
+      <Name>Unity.Splines</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.Editor.csproj">
       <Project>{C01A0955-C07A-88BC-276B-ABD4AE752029}</Project>
       <Name>Unity.Mathematics.Editor</Name>
@@ -1177,6 +1195,10 @@
     <ProjectReference Include="Unity.RenderPipelines.GPUDriven.Runtime.csproj">
       <Project>{539C9F48-835C-2821-830C-AC25F763D9F1}</Project>
       <Name>Unity.RenderPipelines.GPUDriven.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Cinemachine.csproj">
+      <Project>{FACA08B0-A9A5-6791-A059-B253119AFE5D}</Project>
+      <Name>Unity.Cinemachine</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj">
       <Project>{C7A39750-68D7-1B6B-240C-9D62047F2AAB}</Project>
@@ -1217,6 +1239,10 @@
     <ProjectReference Include="Unity.RenderPipelines.Universal.Config.Runtime.csproj">
       <Project>{B6C6AFD5-E0C3-5229-AB82-6660FFE94BC4}</Project>
       <Name>Unity.RenderPipelines.Universal.Config.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Splines.Editor.csproj">
+      <Project>{B762C564-F961-23FB-CED6-BE8CC4EEF3D1}</Project>
+      <Name>Unity.Splines.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Aseprite.Common.csproj">
       <Project>{D587A0C3-17A4-10F4-234F-2B26EF12E647}</Project>

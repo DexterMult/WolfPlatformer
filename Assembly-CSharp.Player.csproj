@@ -62,7 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\CameraFollow.cs" />
+    <Compile Include="Assets\Script\Parallax\ParallaxBackground.cs" />
+    <Compile Include="Assets\Script\Parallax\ParallaxCamera.cs" />
     <Compile Include="Assets\Script\Enemy\Mushroom\AtackMushroom.cs" />
+    <Compile Include="Assets\Script\ManeMenu\SelectedLVL.cs" />
+    <Compile Include="Assets\Script\Parallax\ParallaxLayer.cs" />
+    <Compile Include="Assets\Script\ManeUI\Timer.cs" />
     <Compile Include="Assets\Script\Moove.cs" />
     <Compile Include="Assets\Script\Enemy\IEnemy.cs" />
     <Compile Include="Assets\Script\cat_scene_script.cs" />
@@ -71,10 +76,15 @@
     <Compile Include="Assets\Script\CheckGround.cs" />
     <Compile Include="Assets\Script\Enemy\Mushroom\MooveMushroom.cs" />
     <Compile Include="Assets\Script\LegsAtack.cs" />
+    <Compile Include="Assets\Script\ManeMenu\StartGameMenu.cs" />
+    <Compile Include="Assets\Script\ManeMenu\SceneLoader.cs" />
+    <Compile Include="Assets\Script\ManeUI\ButtonsSetting.cs" />
     <Compile Include="Assets\Script\BonusesChecker.cs" />
     <Compile Include="Assets\Script\Traps\ITrapable.cs" />
     <Compile Include="Assets\Script\Traps\thorns.cs" />
+    <Compile Include="Assets\Script\ManeMenu\ButtonsManeMenu.cs" />
     <Compile Include="Assets\Script\textPanelScript.cs" />
+    <Compile Include="Assets\Script\ManeUI\Healch.cs" />
     <Compile Include="Assets\Script\Enemy\Mushroom\RaycastLeftRightDetection.cs" />
     <Compile Include="Assets\Script\Death.cs" />
   </ItemGroup>
@@ -934,9 +944,17 @@
       <Project>{BFB67275-E368-D186-C118-FA517848369A}</Project>
       <Name>Unity.RenderPipelines.Core.ShaderLibrary.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Splines.Player.csproj">
+      <Project>{DE1CA0E7-B81F-7A1D-E99D-E5E0E1DE4705}</Project>
+      <Name>Unity.Splines.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.GPUDriven.Runtime.Player.csproj">
       <Project>{E981C6E8-7549-055E-F74F-4D62C032D5C2}</Project>
       <Name>Unity.RenderPipelines.GPUDriven.Runtime.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Cinemachine.Player.csproj">
+      <Project>{F2958661-4716-D927-D4DE-169322B3B2C3}</Project>
+      <Name>Unity.Cinemachine.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Collections.Player.csproj">
       <Project>{9EA1C468-3408-9CD9-CA61-15D8C6136567}</Project>

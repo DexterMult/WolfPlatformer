@@ -1,20 +1,23 @@
 using UnityEngine;
+using TMPro;
 
 public class BonusesChecker : MonoBehaviour
 {
-    public int coin = 0;
+    public int coinInt = 0;
+    public TextMeshProUGUI _coinTMP;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("BunTag")) 
         {
-            coin++;
-            Debug.Log("Очки: " + coin);
+            coinInt++;
             Destroy(other.gameObject);
+            _coinTMP.text = coinInt.ToString();
         }
     }
     void Start()
     {
-        coin = 0;
+        coinInt = 0;
+        _coinTMP.text = "0";
     }
 
     // Update is called once per frame
