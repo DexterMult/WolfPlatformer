@@ -5,10 +5,13 @@ public class BonusesChecker : MonoBehaviour
 {
     public int coinInt = 0;
     public TextMeshProUGUI _coinTMP;
+    public GameObject SoundListener;
+    private Sounds soundSCR;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("BunTag")) 
         {
+            soundSCR.PlaySound(soundSCR.sounds[7]);
             coinInt++;
             Destroy(other.gameObject);
             _coinTMP.text = coinInt.ToString();
@@ -16,13 +19,9 @@ public class BonusesChecker : MonoBehaviour
     }
     void Start()
     {
+        soundSCR = SoundListener.GetComponent<Sounds>();
         coinInt = 0;
         _coinTMP.text = "0";
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using System;
 public class SelectedLVL : MonoBehaviour
 {
-    private int currentLVLIndex;
+    public int currentLVLIndex;
 
     public void SelectLVL(int lvlIndex)
     {
@@ -11,8 +11,6 @@ public class SelectedLVL : MonoBehaviour
     }
     public void StartGame()
     {
-        //if (currentLVLIndex == 0)
-        //    Debug.Log("”ровн€ не существует");
         if (IsSceneExists("LVL" + currentLVLIndex) == false)
         {
             Debug.Log("—цена не найдена");

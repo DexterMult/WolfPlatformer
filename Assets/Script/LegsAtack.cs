@@ -8,7 +8,6 @@ public class LegsAtack : MonoBehaviour
         if (collision.gameObject.CompareTag("EnemyTag"))
         {
             GameObject Enemy = collision.gameObject;
-            Debug.Log(Enemy.name);
             heroeMoove.heroeAtack = true;
             Destroy(Enemy);
 

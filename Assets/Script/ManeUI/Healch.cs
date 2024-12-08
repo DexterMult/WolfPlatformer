@@ -13,14 +13,7 @@ public class Healch : MonoBehaviour
     [SerializeField] private float A;
     [SerializeField] private float B;
 
-    void Start()
-    {
-        HitPoints = 3;
-        R = 0.5f;
-        G = 0;
-        B = 0;
-        A = 1;
-    }
+
 
     private void HPColorSwitcher(Image hitPoint)
     {
@@ -45,8 +38,15 @@ public class Healch : MonoBehaviour
             HPColorSwitcher(HP1);
         }
     }
-
-        void Update()
+    void Start()
+    {
+        HitPoints = 3;
+        R = 0.5f;
+        G = 0;
+        B = 0;
+        A = 1;
+    }
+    void Update()
         {
         HealchDestroi();
         }

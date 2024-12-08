@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\CameraFollow.cs" />
+    <Compile Include="Assets\Script\RedHud\EndGameTrigger.cs" />
     <Compile Include="Assets\Script\Parallax\ParallaxBackground.cs" />
     <Compile Include="Assets\Script\Parallax\ParallaxCamera.cs" />
     <Compile Include="Assets\Script\Enemy\Mushroom\AtackMushroom.cs" />
@@ -71,18 +72,29 @@
     <Compile Include="Assets\Script\Moove.cs" />
     <Compile Include="Assets\Script\Enemy\IEnemy.cs" />
     <Compile Include="Assets\Script\cat_scene_script.cs" />
+    <Compile Include="Assets\Script\ManeUI\StartActivePanels.cs" />
     <Compile Include="Assets\Script\HeroeLegs.cs" />
     <Compile Include="Assets\Script\Bonus\BonusMov.cs" />
     <Compile Include="Assets\Script\CheckGround.cs" />
+    <Compile Include="Assets\Script\ManeUI\LVLChoice.cs" />
     <Compile Include="Assets\Script\Enemy\Mushroom\MooveMushroom.cs" />
+    <Compile Include="Assets\Script\Save\SavedSistem.cs" />
     <Compile Include="Assets\Script\LegsAtack.cs" />
+    <Compile Include="Assets\Script\ManeMenu\LVLStatistic.cs" />
+    <Compile Include="Assets\Script\ManeMenu\SoundLinesManeMenu.cs" />
+    <Compile Include="Assets\Script\Sounds\Sounds.cs" />
     <Compile Include="Assets\Script\ManeMenu\StartGameMenu.cs" />
+    <Compile Include="Assets\Script\PausedGame.cs" />
     <Compile Include="Assets\Script\ManeMenu\SceneLoader.cs" />
+    <Compile Include="Assets\Script\RedHud\EndGameTime.cs" />
     <Compile Include="Assets\Script\ManeUI\ButtonsSetting.cs" />
     <Compile Include="Assets\Script\BonusesChecker.cs" />
+    <Compile Include="Assets\Script\RedHud\EndGameCoins.cs" />
+    <Compile Include="Assets\Script\RedHud\StarsController.cs" />
     <Compile Include="Assets\Script\Traps\ITrapable.cs" />
     <Compile Include="Assets\Script\Traps\thorns.cs" />
     <Compile Include="Assets\Script\ManeMenu\ButtonsManeMenu.cs" />
+    <Compile Include="Assets\Script\ManeMenu\SoundLines.cs" />
     <Compile Include="Assets\Script\textPanelScript.cs" />
     <Compile Include="Assets\Script\ManeUI\Healch.cs" />
     <Compile Include="Assets\Script\Enemy\Mushroom\RaycastLeftRightDetection.cs" />

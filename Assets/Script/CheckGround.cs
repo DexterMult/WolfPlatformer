@@ -10,12 +10,16 @@ public class CheckGround : MonoBehaviour
     public float timeGroundOut;
     public float raycastDistance;
 
+    public GameObject SoundListener;
+    private Sounds soundSCR;
+
     public Rigidbody2D rigidbodys;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground0"))
+        if (collision.gameObject.CompareTag("Ground0") || collision.gameObject.CompareTag("ThornsTag"))
         {
             isGround = true;
+            soundSCR.PlaySound(soundSCR.sounds[2], volume: 0.6f);
             jumpCounter = 0;
             getGround();
             getCounter();
@@ -25,7 +29,7 @@ public class CheckGround : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground0"))
+        if (collision.gameObject.CompareTag("Ground0") || collision.gameObject.CompareTag("ThornsTag"))
         {
             isGround = false;
             jumpCounter = 1;
@@ -79,6 +83,7 @@ public class CheckGround : MonoBehaviour
     }
     void Start()
     {
+        soundSCR = SoundListener.GetComponent<Sounds>();
         moveScript = GetComponentInParent<Moove>();
         raycastDistance = 1.2f;
     }

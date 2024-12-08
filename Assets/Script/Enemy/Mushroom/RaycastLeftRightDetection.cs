@@ -42,7 +42,7 @@ public class RaycastLeftRightDetection : MonoBehaviour
             {
                 GameObject hitObject = hit.collider.gameObject;
                 string hitObjectName = hitObject.name;
-                if (hitObjectName != gameObject.name)
+                if (hitObjectName != gameObject.name && hitObjectName != "Confiner2D")
                 {
                     MooveMushroom.rightCollision = false;
                     MooveMushroom.leftCollision = true;
@@ -56,7 +56,7 @@ public class RaycastLeftRightDetection : MonoBehaviour
             {
                 GameObject hitObject = hit.collider.gameObject;
                 string hitObjectName = hitObject.name;
-                if (hitObjectName != gameObject.name)
+                if (hitObjectName != gameObject.name && hitObjectName != "Confiner2D")
                 {
                     MooveMushroom.rightCollision = true;
                     MooveMushroom.leftCollision = false;
@@ -68,7 +68,7 @@ public class RaycastLeftRightDetection : MonoBehaviour
     void Start()
     {
         EnemyMoshroom = gameObject;
-        raycastDistance = 0.5f;
+        raycastDistance = 0.8f;
         EnemyTransform = GetComponent<Transform>();
         MooveMushroom = GetComponent<MooveMushroom>();
     }

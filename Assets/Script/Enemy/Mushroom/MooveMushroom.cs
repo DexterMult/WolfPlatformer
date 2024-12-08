@@ -33,7 +33,7 @@ public class MooveMushroom : MonoBehaviour, IEnemy
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raycastDistance, groundLayer);
         Debug.DrawRay(EnemyTransform.position, Vector2.down * raycastDistance, Color.red);
-        if (hit.collider != null)
+        if (hit.collider != null && hit.collider.name != "Confiner2D")
         {
             return true; // Персонаж стоит на земле
         }
@@ -42,14 +42,7 @@ public class MooveMushroom : MonoBehaviour, IEnemy
     }
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Collider2D collider = collision.collider;
-        if (collider.name == "Legs")
-        {
 
-        }
-    }
     private void DirectionSwitcher()
 
     {
@@ -64,7 +57,7 @@ public class MooveMushroom : MonoBehaviour, IEnemy
             rightCollision = false;
         }
 
-        if (enemyMooveDirection == "RIGHT" && checkGrounded == false)
+        else if (enemyMooveDirection == "RIGHT" && checkGrounded == false)
         {
             EnemyRigidbody.linearVelocity = new Vector2(-2, 0);
             enemyMooveDirection = "LEFT";
@@ -81,7 +74,7 @@ public class MooveMushroom : MonoBehaviour, IEnemy
         {
             EnemyRun(Vector2.right);
         }
-        if (enemyMooveDirection == "LEFT")
+        else if (enemyMooveDirection == "LEFT")
         {
             EnemyRun(Vector2.left);
         }
@@ -117,11 +110,12 @@ public class MooveMushroom : MonoBehaviour, IEnemy
 
     void Update()
     {
-        NoneSthopRun();
-        MaxVelocity();
+
     }
     void FixedUpdate()
     {
+        NoneSthopRun();
+        MaxVelocity();
         checkGrounded = CheckGrounded();
         DirectionSwitcher();
 

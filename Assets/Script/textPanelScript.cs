@@ -2,16 +2,15 @@ using UnityEngine;
 
 public class textPanelScript : MonoBehaviour
 {
-    public GameObject textPanel; // Ссылка на панель с текстом
+    public GameObject textPanel;
 
 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Проверяем, является ли объект игроком
-        if (other.CompareTag("HeroeTag")) // Убедитесь, что у вашего игрока установлен тег "Player"
+        if (other.CompareTag("HeroeTag") && textPanel != null) // Убедитесь, что у вашего игрока установлен тег "Player"
         {
-            Debug.Log("Тру");
             textPanel.SetActive(true); // Показываем панель
         }
     }
@@ -19,9 +18,8 @@ public class textPanelScript : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         // Проверяем, покинул ли игрок триггер
-        if (other.CompareTag("HeroeTag"))
+        if (other.CompareTag("HeroeTag") && textPanel != null)
         {
-            Debug.Log("Фолс");
             textPanel.SetActive(false); // Скрываем панель
         }
     }
@@ -31,8 +29,4 @@ public class textPanelScript : MonoBehaviour
         textPanel.SetActive(false);
     }
 
-    void Update()
-    {
-        
-    }
 }

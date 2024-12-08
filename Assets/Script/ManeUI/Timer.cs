@@ -3,9 +3,9 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    private float _timer;
-    private float _secund;
-    private float _minuts;
+    public float _timer;
+    public float _secund;
+    public float _minuts;
     public TextMeshProUGUI _secundTMP;
     public TextMeshProUGUI _minutsTMP;
     void Start()

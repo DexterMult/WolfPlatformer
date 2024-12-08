@@ -9,6 +9,8 @@ public class Moove : MonoBehaviour
     [Header("Позиция")]
     public float previousYPosition;
     public Transform trans;
+    public GameObject SoundListener;
+    private Sounds soundSCR;
 
     public bool death;
     public float lastYpos;
@@ -105,6 +107,7 @@ public class Moove : MonoBehaviour
 
         if (damage != 0)
         {
+            soundSCR.PlaySound(soundSCR.sounds[3]);
             damagePermission = false;
             Healch.HitPoints = healch-damage;
             healch = healch - damage;
@@ -113,13 +116,11 @@ public class Moove : MonoBehaviour
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocityX, 0);
                 rb.AddForce(new Vector2(-kickForce, kickForce), ForceMode2D.Impulse);
-                Debug.Log("Right");
             }
             else if (damagerPosition.x < trans.position.x)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocityX, 0);
                 rb.AddForce(new Vector2(+kickForce, kickForce), ForceMode2D.Impulse);
-                Debug.Log("Left");
             }
 
         }
@@ -129,12 +130,14 @@ public class Moove : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true && (jumpCounter == 0 || jumpCounter == 3))
         {
+            soundSCR.PlaySound(soundSCR.sounds[1]);
             isJump = true;
             isGrounded = false;
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
         if (Input.GetKeyDown(KeyCode.Space) && jumpCounter == 1 && reservTimeJumpPermisison == true)
         {
+            soundSCR.PlaySound(soundSCR.sounds[1]);
             isJump = true;
             rb.constraints = RigidbodyConstraints2D.None;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -151,6 +154,7 @@ public class Moove : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == false && jumpCounter == 1 && reservTimeJumpPermisison == false && isJump == true)
         {
+            soundSCR.PlaySound(soundSCR.sounds[1]);
             rb.linearVelocity = new Vector2(rb.linearVelocityX, 0);
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             jumpCounter = 3;
@@ -270,8 +274,11 @@ public class Moove : MonoBehaviour
         scale.x *= -1;
         transform.localScale = scale;
     }
+
+   
     void Start()
     {
+        soundSCR = SoundListener.GetComponent<Sounds>();
         Healch = GetComponent<Healch>();
         damagePermission = true;
         damageTime = 0;
