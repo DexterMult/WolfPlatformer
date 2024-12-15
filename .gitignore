@@ -1,0 +1,25 @@
+# User-specific files
+*.userprefs
+
+# Builds
+*/bin/
+*/obj/
+*.apk
+*.unitypackage
+
+# Visual Studio
+*.sln
+*.user
+*.userprefs
+.vscode/
+
+# Mac
+.DS_Store
+
+# Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/

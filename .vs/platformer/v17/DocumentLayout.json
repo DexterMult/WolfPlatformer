@@ -1,0 +1,255 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\unity6\\platformer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\redhud\\endgametrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\redhud\\endgametrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|d:\\unity6\\platformer\\assets\\script\\pausedgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\pausedgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|d:\\unity6\\platformer\\assets\\script\\save\\savedsistem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\save\\savedsistem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|d:\\unity6\\platformer\\assets\\script\\maneui\\healch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\maneui\\healch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|d:\\unity6\\platformer\\assets\\script\\redhud\\starscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\redhud\\starscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\manemenu\\lvlstatistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\manemenu\\lvlstatistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\sounds\\sounds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\sounds\\sounds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\bonuseschecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bonuseschecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\death.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\death.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\checkground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\checkground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\maneui\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\maneui\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\manemenu\\soundlinesmanemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\manemenu\\soundlinesmanemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\manemenu\\selectedlvl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\manemenu\\selectedlvl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|D:\\unity6\\platformer\\assets\\script\\maneui\\lvlchoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DF86CE5-98AD-27B9-C81C-95E986E42321}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\maneui\\lvlchoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PausedGame.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\PausedGame.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PausedGame.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\PausedGame.cs",
+              "RelativeToolTip": "Assets\\Script\\PausedGame.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T22:14:54.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Healch.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\ManeUI\\Healch.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ManeUI\\Healch.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\ManeUI\\Healch.cs",
+              "RelativeToolTip": "Assets\\Script\\ManeUI\\Healch.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T21:52:31.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StarsController.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\RedHud\\StarsController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\RedHud\\StarsController.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\RedHud\\StarsController.cs",
+              "RelativeToolTip": "Assets\\Script\\RedHud\\StarsController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAIwBQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T15:11:02.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EndGameTrigger.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\RedHud\\EndGameTrigger.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\RedHud\\EndGameTrigger.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\RedHud\\EndGameTrigger.cs",
+              "RelativeToolTip": "Assets\\Script\\RedHud\\EndGameTrigger.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAqwIMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T11:39:26.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SavedSistem.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\Save\\SavedSistem.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Save\\SavedSistem.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\Save\\SavedSistem.cs",
+              "RelativeToolTip": "Assets\\Script\\Save\\SavedSistem.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T12:50:35.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LVLStatistic.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\ManeMenu\\LVLStatistic.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ManeMenu\\LVLStatistic.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\ManeMenu\\LVLStatistic.cs",
+              "RelativeToolTip": "Assets\\Script\\ManeMenu\\LVLStatistic.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAIgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T23:31:28.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Timer.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\ManeUI\\Timer.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ManeUI\\Timer.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\ManeUI\\Timer.cs",
+              "RelativeToolTip": "Assets\\Script\\ManeUI\\Timer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T13:39:34.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SelectedLVL.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\ManeMenu\\SelectedLVL.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ManeMenu\\SelectedLVL.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\ManeMenu\\SelectedLVL.cs",
+              "RelativeToolTip": "Assets\\Script\\ManeMenu\\SelectedLVL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T19:26:25.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SoundLinesManeMenu.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\ManeMenu\\SoundLinesManeMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ManeMenu\\SoundLinesManeMenu.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\ManeMenu\\SoundLinesManeMenu.cs",
+              "RelativeToolTip": "Assets\\Script\\ManeMenu\\SoundLinesManeMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T15:58:58.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Sounds.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\Sounds\\Sounds.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Sounds\\Sounds.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\Sounds\\Sounds.cs",
+              "RelativeToolTip": "Assets\\Script\\Sounds\\Sounds.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T15:50:54.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LVLChoice.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\ManeUI\\LVLChoice.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ManeUI\\LVLChoice.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\ManeUI\\LVLChoice.cs",
+              "RelativeToolTip": "Assets\\Script\\ManeUI\\LVLChoice.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T13:03:49.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BonusesChecker.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\BonusesChecker.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\BonusesChecker.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\BonusesChecker.cs",
+              "RelativeToolTip": "Assets\\Script\\BonusesChecker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T12:32:48.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Death.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\Death.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Death.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\Death.cs",
+              "RelativeToolTip": "Assets\\Script\\Death.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T20:12:34.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CheckGround.cs",
+              "DocumentMoniker": "D:\\unity6\\platformer\\Assets\\Script\\CheckGround.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\CheckGround.cs",
+              "ToolTip": "D:\\unity6\\platformer\\Assets\\Script\\CheckGround.cs",
+              "RelativeToolTip": "Assets\\Script\\CheckGround.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAUwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T16:58:16.664Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
