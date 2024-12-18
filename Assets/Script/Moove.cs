@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Moove : MonoBehaviour
 {
+    public static Moove singleton { get; set; }
+    private Healch Healch;
     [Header("Анимация")]
     public Animator animator;
     private SpriteRenderer spriteRenderer;
@@ -20,22 +22,21 @@ public class Moove : MonoBehaviour
     public Rigidbody2D rb;
     public float moveSpeed;
     bool isFacingRight = true;
-    public float jumpForce;
-    public bool isGrounded;
     public float maxVelocityX;
     public float maxVelocityY;
-    public int jumpCounter = 0;
 
-    public float maxDistance = 50;
-
-    public float timeGroundOut;
-    public float timeFallPassed;
+    [Header("Прыжок")]
+    public float jumpForce;
     public float reservTimeJump;
     public bool reservTimeJumpPermisison;
+    public int jumpCounter = 0;
     public bool isJump;
+    public float maxDistance = 50;
+    public float timeGroundOut;
+    public float timeFallPassed;
+    public bool isHigher;
 
     [Header("Урон")]
-    Healch Healch;
     public bool damageSwitcher;
     public string names = "HeroeMan";
     public int healch;
@@ -54,35 +55,19 @@ public class Moove : MonoBehaviour
 
     [Header("Платформа")]
     public bool isOnPlatform;
-    public Rigidbody2D platformRB;
+    public bool isGrounded;
+    public PStandart platform;
     public Vector3 pDirection;
     public float pSpeed;
     public float gravityScale;
 
-    private void PlatformDirection()
-    {
-        Debug.Log(pDirection);
-        if (isOnPlatform == true)
-        {
 
-            Debug.Log(maxVelocityX);
-            if (pDirection.x < 0 && isFacingRight == false)
-            {
-                maxVelocityX = 8 + math.abs(platformRB.linearVelocityX);
-            }
-            else if (pDirection.x < 0 && isFacingRight == true)
-            {
-                maxVelocityX = 8;
-            }
-            else if (pDirection.x > 0 && isFacingRight == false)
-            {
-                maxVelocityX = 8;
-            }
-            else if (pDirection.x > 0 && isFacingRight == true)
-            {
-                maxVelocityX = 8 + platformRB.linearVelocityX;
-            }
-            else { maxVelocityX = 8; }
+
+    private void OnApplicationQuit()
+    {
+        if (transform.parent != null)
+        {
+            transform.SetParent(null);
         }
     }
     private void HeroeAtack()
@@ -263,12 +248,13 @@ public class Moove : MonoBehaviour
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// ЗЕМЛЯ
             if (Input.GetKey(KeyCode.A))
             {
-                if (isOnPlatform == true)
+                if (isOnPlatform == true && isHigher == true)
                 {
                     rb.linearVelocityX = -maxVelocityX;
                     //rb.AddForce(Vector2.left * moveSpeed, ForceMode2D.Impulse);
                     //rb.linearVelocityX = rb.linearVelocityX + platformRB.linearVelocityX;
                     animator.SetInteger("run", 1);
+                    animator.SetBool("isHigher", isHigher);
                 }
 
                 else
@@ -291,8 +277,9 @@ public class Moove : MonoBehaviour
             }
             else if (Input.GetKey(KeyCode.D))
             {
-                if (isOnPlatform == true)
+                if (isOnPlatform == true && isHigher == true)
                 {
+                    Debug.Log("Бегаем");
                     rb.linearVelocityX = maxVelocityX;
                     //rb.linearVelocityX = rb.linearVelocityX + platformRB.linearVelocityX;
                     animator.SetInteger("run", 1);
@@ -348,7 +335,18 @@ public class Moove : MonoBehaviour
         transform.localScale = scale;
     }
 
-
+    private void Awake()
+    {
+        if (!singleton)
+        {
+            singleton = this;
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     void Start()
     {
         gravityScale = 5;
@@ -376,13 +374,11 @@ public class Moove : MonoBehaviour
         atackJumpForce = 50f;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        PlatformDirection();
-        timeFallPassed = Time.time - timeGroundOut;
         animator.SetBool("isground", isGrounded);
         animator.SetBool("isOnPlatform", isOnPlatform);
+        timeFallPassed = Time.time - timeGroundOut;
         Damage();
         Run();
         maxVelocity();

@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "D:\\unity6\\WolfPlatformer-main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AD0C20FA-2C26-FC1E-EC43-FA669AC3C6BE}|Assembly-CSharp.csproj|D:\\unity6\\WolfPlatformer-main\\assets\\script\\platforms\\pstandart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD0C20FA-2C26-FC1E-EC43-FA669AC3C6BE}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\platforms\\pstandart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD0C20FA-2C26-FC1E-EC43-FA669AC3C6BE}|Assembly-CSharp.csproj|d:\\unity6\\wolfplatformer-main\\assets\\script\\moove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD0C20FA-2C26-FC1E-EC43-FA669AC3C6BE}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\moove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD0C20FA-2C26-FC1E-EC43-FA669AC3C6BE}|Assembly-CSharp.csproj|D:\\unity6\\WolfPlatformer-main\\assets\\script\\checkground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AD0C20FA-2C26-FC1E-EC43-FA669AC3C6BE}|Assembly-CSharp.csproj|d:\\unity6\\wolfplatformer-main\\assets\\script\\checkground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD0C20FA-2C26-FC1E-EC43-FA669AC3C6BE}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\checkground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD0C20FA-2C26-FC1E-EC43-FA669AC3C6BE}|Assembly-CSharp.csproj|D:\\unity6\\WolfPlatformer-main\\assets\\shaders\\orderinlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD0C20FA-2C26-FC1E-EC43-FA669AC3C6BE}|Assembly-CSharp.csproj|solutionrelative:assets\\shaders\\orderinlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD0C20FA-2C26-FC1E-EC43-FA669AC3C6BE}|Assembly-CSharp.csproj|d:\\unity6\\wolfplatformer-main\\assets\\script\\platforms\\checkingtheheight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD0C20FA-2C26-FC1E-EC43-FA669AC3C6BE}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\platforms\\checkingtheheight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD0C20FA-2C26-FC1E-EC43-FA669AC3C6BE}|Assembly-CSharp.csproj|D:\\unity6\\WolfPlatformer-main\\assets\\script\\moove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD0C20FA-2C26-FC1E-EC43-FA669AC3C6BE}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\moove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD0C20FA-2C26-FC1E-EC43-FA669AC3C6BE}|Assembly-CSharp.csproj|D:\\unity6\\WolfPlatformer-main\\assets\\script\\platforms\\poneway.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD0C20FA-2C26-FC1E-EC43-FA669AC3C6BE}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\platforms\\poneway.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD0C20FA-2C26-FC1E-EC43-FA669AC3C6BE}|Assembly-CSharp.csproj|D:\\unity6\\WolfPlatformer-main\\assets\\script\\platforms\\pstandart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD0C20FA-2C26-FC1E-EC43-FA669AC3C6BE}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\platforms\\pstandart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,57 +30,70 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PStandart.cs",
-              "DocumentMoniker": "D:\\unity6\\WolfPlatformer-main\\Assets\\Script\\Platforms\\PStandart.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Platforms\\PStandart.cs",
-              "ToolTip": "D:\\unity6\\WolfPlatformer-main\\Assets\\Script\\Platforms\\PStandart.cs",
-              "RelativeToolTip": "Assets\\Script\\Platforms\\PStandart.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAcwFwAAAAzAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "CheckingTheHeight.cs",
+              "DocumentMoniker": "D:\\unity6\\WolfPlatformer-main\\Assets\\Script\\Platforms\\CheckingTheHeight.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Platforms\\CheckingTheHeight.cs",
+              "ToolTip": "D:\\unity6\\WolfPlatformer-main\\Assets\\Script\\Platforms\\CheckingTheHeight.cs",
+              "RelativeToolTip": "Assets\\Script\\Platforms\\CheckingTheHeight.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBYAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T00:18:11.199Z",
+              "WhenOpened": "2024-12-17T15:42:32.485Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Moove.cs",
               "DocumentMoniker": "D:\\unity6\\WolfPlatformer-main\\Assets\\Script\\Moove.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Moove.cs",
               "ToolTip": "D:\\unity6\\WolfPlatformer-main\\Assets\\Script\\Moove.cs",
               "RelativeToolTip": "Assets\\Script\\Moove.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAlwJ8AAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAOcAAAAAAAAAAAAEwAABAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-13T20:15:38.446Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "PStandart.cs",
+              "DocumentMoniker": "D:\\unity6\\WolfPlatformer-main\\Assets\\Script\\Platforms\\PStandart.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Platforms\\PStandart.cs",
+              "ToolTip": "D:\\unity6\\WolfPlatformer-main\\Assets\\Script\\Platforms\\PStandart.cs",
+              "RelativeToolTip": "Assets\\Script\\Platforms\\PStandart.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAF0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T00:18:11.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "CheckGround.cs",
               "DocumentMoniker": "D:\\unity6\\WolfPlatformer-main\\Assets\\Script\\CheckGround.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CheckGround.cs",
               "ToolTip": "D:\\unity6\\WolfPlatformer-main\\Assets\\Script\\CheckGround.cs",
               "RelativeToolTip": "Assets\\Script\\CheckGround.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAIwGQAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAnwDUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T02:15:32.824Z"
+              "WhenOpened": "2024-12-13T02:15:32.824Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "OrderInLayer.cs",
-              "DocumentMoniker": "D:\\unity6\\WolfPlatformer-main\\Assets\\Shaders\\OrderInLayer.cs",
-              "RelativeDocumentMoniker": "Assets\\Shaders\\OrderInLayer.cs",
-              "ToolTip": "D:\\unity6\\WolfPlatformer-main\\Assets\\Shaders\\OrderInLayer.cs",
-              "RelativeToolTip": "Assets\\Shaders\\OrderInLayer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
+              "Title": "POneWay.cs",
+              "DocumentMoniker": "D:\\unity6\\WolfPlatformer-main\\Assets\\Script\\Platforms\\POneWay.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Platforms\\POneWay.cs",
+              "ToolTip": "D:\\unity6\\WolfPlatformer-main\\Assets\\Script\\Platforms\\POneWay.cs",
+              "RelativeToolTip": "Assets\\Script\\Platforms\\POneWay.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T00:44:36.989Z"
+              "WhenOpened": "2024-12-16T19:16:23.947Z"
             }
           ]
         }

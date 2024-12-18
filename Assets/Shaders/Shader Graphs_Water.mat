@@ -52,9 +52,9 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Deep: {r: 0.109803915, g: 0.2901961, b: 0.26494396, a: 0}
-    - _FoamColor: {r: 0.69882524, g: 0.9668819, b: 0.9811321, a: 0}
-    - _Shallow: {r: 0.33490568, g: 1, b: 0.69430304, a: 0}
+    - _Deep: {r: 0.10980389, g: 0.29019606, b: 0.26494393, a: 1}
+    - _FoamColor: {r: 0.69882524, g: 0.9668818, b: 0.9811321, a: 1}
+    - _Shallow: {r: 0.33490565, g: 1, b: 0.69430304, a: 1}
     - _Speed: {r: 1, g: 0.05, b: 0, a: 0}
     - _Tiling: {r: 0.3, g: 0.6, b: 0, a: 0}
   m_BuildTextureStacks: []

@@ -107,6 +107,7 @@
     <Compile Include="Assets\Script\ManeUI\ButtonsSetting.cs" />
     <Compile Include="Assets\Shaders\OrderInLayer.cs" />
     <Compile Include="Assets\Script\BonusesChecker.cs" />
+    <Compile Include="Assets\Script\Platforms\POneWay.cs" />
     <Compile Include="Assets\Script\RedHud\EndGameCoins.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\RendererFeatures\KeepFrame\KeepFrameFeature.cs" />
     <Compile Include="Assets\Script\RedHud\StarsController.cs" />
@@ -125,6 +126,7 @@
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP RenderGraph Samples\BlitWithMaterial\BlitAndSwapColorRendererFeature.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP RenderGraph Samples\OutputTexture\OutputTextureRendererFeature.cs" />
     <Compile Include="Assets\Script\ManeUI\Healch.cs" />
+    <Compile Include="Assets\Script\Platforms\CheckingTheHeight.cs" />
     <Compile Include="Assets\Script\Enemy\Mushroom\RaycastLeftRightDetection.cs" />
     <Compile Include="Assets\Script\Death.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP RenderGraph Samples\Compute\ComputeRendererFeature.cs" />

@@ -28,6 +28,7 @@ public class CheckGround : MonoBehaviour
         }
 
     }
+
     private void SetParrent()
     {
         if (transform.parent == null)
@@ -49,6 +50,12 @@ public class CheckGround : MonoBehaviour
                 moveScript.reservTimeJumpPermisison = true;
                 rigidbodys.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
             }
+            else if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && !Input.GetKey(KeyCode.Space) && moveScript.isOnPlatform == false && moveScript.isHigher == true 
+                && moveScript.reservTimeJumpPermisison == false && moveScript.isJump == true)
+            {
+                moveScript.reservTimeJumpPermisison = true;
+                rigidbodys.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+            }
         }
     }
     private void RaycastLeftRightChecker()
@@ -63,7 +70,6 @@ public class CheckGround : MonoBehaviour
                 string hitObjectTag = hitObject.tag;
                 if (hitObjectTag == "ThornsTag")
                 {
-                    Debug.Log("ThornsTagConatact");
                     isGround = true;
                     jumpCounter = 0;
                     getGround();
@@ -95,6 +101,7 @@ public class CheckGround : MonoBehaviour
         moveScript = GetComponentInParent<Moove>();
         raycastDistance = 1.2f;
     }
+
 
     void Update()
     {

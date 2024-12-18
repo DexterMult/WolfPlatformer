@@ -9,7 +9,8 @@ public class PStandart : MonoBehaviour
     Vector3 targetPos;
 
     Moove movementController;
-    Rigidbody2D rb;
+
+    //Rigidbody2D rb;
     Vector3 moveDirection;
 
     public Rigidbody2D heroRB;
@@ -24,7 +25,6 @@ public class PStandart : MonoBehaviour
     private void Awake()
     {
         movementController = GameObject.FindGameObjectWithTag("HeroeTag").GetComponent<Moove>();
-        rb = GetComponent<Rigidbody2D>();
 
         wayPoints = new Transform[ways.transform.childCount];
         for (int i = 0; i < ways.gameObject.transform.childCount; i++)
@@ -35,24 +35,21 @@ public class PStandart : MonoBehaviour
 
     private void Start()
     {
-        pointIndex = 1;
+        pointIndex = 0;
         pointCount = wayPoints.Length;
-        targetPos = wayPoints[1].transform.position;
+        targetPos = wayPoints[0].transform.position;
         DirectionCalculate();
     }
     private void Update()
     {
+        transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
         movementController.pDirection = moveDirection;
-        if (Vector2.Distance(transform.position, targetPos) < 0.1f)
+        if (transform.position == targetPos)
         {
             NextPoint();
         }
     }
 
-    private void FixedUpdate()
-    {
-        rb.linearVelocity = moveDirection * speed;
-    }
 
     private void NextPoint()
     {
@@ -83,13 +80,17 @@ public class PStandart : MonoBehaviour
     {
         moveDirection = (targetPos - transform.position).normalized;
     }
+    public Vector3 GetVelicity()
+    {
+        return moveDirection * speed;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("HeroeTag"))
         {
             collision.transform.parent = this.transform;
             movementController.isOnPlatform = true;
-            movementController.platformRB = rb;
+            movementController.platform = this;
             movementController.jumpCounter = 0;
             movementController.pSpeed = speed;
             heroRB.gravityScale = 30f;
