@@ -16,7 +16,6 @@ public class LegsAtack : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
         heroeMoove = GetComponentInParent<Moove>();
     }
 

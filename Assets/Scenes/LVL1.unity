@@ -2120,6 +2120,7 @@ GameObject:
   - component: {fileID: 211741781}
   - component: {fileID: 211741782}
   - component: {fileID: 211741783}
+  - component: {fileID: 211741784}
   m_Layer: 6
   m_Name: Heroe
   m_TagString: HeroeTag
@@ -2158,19 +2159,8 @@ MonoBehaviour:
   timeGroundOut: 0
   timeFallPassed: 0
   isHigher: 0
-  damageSwitcher: 0
   names: HeroeMan
-  healch: 56
-  damage: 0
-  damagerPosition: {x: 0, y: 0}
-  damageTime: 0
-  damagePermission: 0
-  ghostTimer: 0
-  ghostTime: 0
-  reservGhostTime: 0
   runDisabler: 0
-  kickForce: 0
-  alpha: 0
   heroeAtack: 0
   atackJumpForce: 0
   isOnPlatform: 0
@@ -2394,6 +2384,30 @@ MonoBehaviour:
   G: 0
   A: 0
   B: 0
+--- !u!114 &211741784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211741771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191e2eb325847f84d846536dfc1e157b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePermission: 0
+  reservGhostTime: 0
+  damageTime: 0
+  damage: 0
+  SoundListener: {fileID: 2114847085}
+  healch: 0
+  damagerPosition: {x: 0, y: 0}
+  kickForce: 0
+  damageSwitcher: 0
+  alpha: 0
+  ghostTimer: 0
+  ghostTime: 0
 --- !u!1 &246731969
 GameObject:
   m_ObjectHideFlags: 0
@@ -4116,7 +4130,7 @@ Transform:
   m_GameObject: {fileID: 471520022}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.3625226, y: 3.6598945, z: 8}
+  m_LocalPosition: {x: -5.365041, y: 3.6598945, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4164,7 +4178,7 @@ Transform:
   m_GameObject: {fileID: 473910891}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.725045, y: 0, z: 6}
+  m_LocalPosition: {x: -10.730082, y: 0, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15428,7 +15442,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 11.25
+  orthographic size: 10.4375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -15453,7 +15467,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.911358, y: 5.37472, z: -10}
+  m_LocalPosition: {x: 40.891212, y: 5.3747697, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39064,7 +39078,7 @@ Transform:
   m_GameObject: {fileID: 1171895078}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.043795, y: 1.9310036, z: 7}
+  m_LocalPosition: {x: -8.047575, y: 1.9310036, z: 7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -40912,6 +40926,7 @@ GameObject:
   - component: {fileID: 1433749872}
   - component: {fileID: 1433749871}
   - component: {fileID: 1433749870}
+  - component: {fileID: 1433749874}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -41005,6 +41020,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 4000, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1433749874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433749869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191e2eb325847f84d846536dfc1e157b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePermission: 0
+  reservGhostTime: 0
+  damageTime: 0
+  damage: 0
+  SoundListener: {fileID: 0}
+  healch: 0
+  damagerPosition: {x: 0, y: 0}
+  kickForce: 0
+  damageSwitcher: 0
+  alpha: 0
+  ghostTimer: 0
+  ghostTime: 0
 --- !u!1 &1466810147
 GameObject:
   m_ObjectHideFlags: 0
@@ -43111,7 +43150,7 @@ Transform:
   m_GameObject: {fileID: 1789825503}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.6812572, y: 13.806004, z: 9}
+  m_LocalPosition: {x: -3.6825166, y: 13.806004, z: 9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -1,0 +1,12 @@
+# ninja log v5
+43	469	7554709237244255	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	9542e10ac44b9aeb
+470	896	7554709240975569	C:/apps/wolfplatformer/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/531g6rj2/obj/arm64-v8a/libswappywrapper.so	4381a765019324c6
+15	1206	7554709244501543	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	4f9892231283f53
+20	1222	7554709244671582	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	24c68dff6f8135f0
+11	1223	7554709244761603	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	e8f957c2208014b5
+30	1245	7554709245031664	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	5c5bbe195fa614ff
+37	1313	7554709245691817	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	f42d91da2c9e6c59
+6	1394	7554709246251947	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	f066f168425c0140
+25	1546	7554709248062351	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	b17eab7afb2ee1f2
+1	1660	7554709249182602	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	465e0400b753cda1
+1660	1757	7554709250232852	C:/apps/wolfplatformer/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/531g6rj2/obj/arm64-v8a/libgame.so	eaaa13c008a28a7f

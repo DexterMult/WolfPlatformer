@@ -12,6 +12,7 @@
 *.user
 *.userprefs
 .vscode/
+.vs
 
 # Mac
 .DS_Store

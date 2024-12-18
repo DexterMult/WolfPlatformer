@@ -3,6 +3,7 @@ using UnityEngine;
 public class AtackMushroom : MonoBehaviour
 {
     Moove mooveScript;
+    DamageManager damageManager;
     GameObject Heroe;
     Transform trans;
     public int mushroomDamage = 1;
@@ -16,12 +17,12 @@ public class AtackMushroom : MonoBehaviour
 
         if (collider.name == "Heroe")
         {
-            mooveScript.damage = mushroomDamage;
-            mooveScript.damagerPosition = mushroomDamagePosition;
+            damageManager.damage = mushroomDamage;
+            damageManager.damagerPosition = mushroomDamagePosition;
 
-            mooveScript.damageTime = Time.time;
+            damageManager.damageTime = Time.time;
             mooveScript.runDisabler = true;
-            mooveScript.damageSwitcher = true;
+            damageManager.damageSwitcher = true;
         }
     }
 
@@ -32,6 +33,7 @@ public class AtackMushroom : MonoBehaviour
         if (Heroe != null)
         {
             mooveScript = Heroe.GetComponent<Moove>();
+            damageManager = Heroe.GetComponent<DamageManager>();
         }
         trans = GetComponent<Transform>();
         mushroomDamage = 1;

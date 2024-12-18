@@ -6,13 +6,14 @@ public class Death : MonoBehaviour
     GameObject Hero;
     public GameObject LoseGamePanel;
     Moove mooveScript;
+    DamageManager damageManager;
     private int healch;
     public GameObject SoundListener;
     private Sounds soundSCR;
     private int HealchChecker()
     {
 
-        healch = mooveScript.healch;
+        healch = damageManager.healch;
 
         return healch;
     }
@@ -31,6 +32,7 @@ public class Death : MonoBehaviour
         if (Hero != null)
         {
             mooveScript = Hero.GetComponent<Moove>();
+            damageManager = Hero.GetComponent<DamageManager>();
         }
     }
     private void GetLoseGamePanel()

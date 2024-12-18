@@ -5,7 +5,6 @@ using UnityEngine;
 public class Moove : MonoBehaviour
 {
     public static Moove singleton { get; set; }
-    private Healch Healch;
     [Header("Анимация")]
     public Animator animator;
     private SpriteRenderer spriteRenderer;
@@ -37,19 +36,8 @@ public class Moove : MonoBehaviour
     public bool isHigher;
 
     [Header("Урон")]
-    public bool damageSwitcher;
     public string names = "HeroeMan";
-    public int healch;
-    public int damage;
-    public Vector2 damagerPosition;
-    public float damageTime;
-    public bool damagePermission;
-    public float ghostTimer;
-    public float ghostTime;
-    public float reservGhostTime;
     public bool runDisabler;
-    public float kickForce;
-    public float alpha;
     public bool heroeAtack;
     public float atackJumpForce;
 
@@ -77,73 +65,6 @@ public class Moove : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocityX, 0);
             rb.AddForce(new Vector2(trans.position.x, atackJumpForce), ForceMode2D.Impulse);
             heroeAtack = false;
-        }
-    }
-    public void SetColor(Color color)
-    {
-
-        spriteRenderer.color = color; // Установка нового цвета
-    }
-    public void SetTransparency(float alpha)
-    {
-
-        Color color = spriteRenderer.color;
-        color.a = Mathf.Clamp01(alpha); // Убедитесь, что значение находится в диапазоне от 0 до 1
-        spriteRenderer.color = color;
-    }
-    private void GhostTimer()
-    {
-
-
-        if (damageSwitcher == true)
-        {
-            alpha = 0.5f;
-            SetColor(new Color(1f, 0f, 0f, alpha));
-            ghostTimer = Time.time - damageTime;
-
-            if (reservGhostTime <= ghostTimer)
-            {
-                SetColor(new Color(1f, 1f, 1f, 1));
-                alpha = 1;
-                damageSwitcher = false;
-                return;
-            }
-            else if (ghostTimer >= ghostTime)
-            {
-                runDisabler = false;
-            }
-        }
-    }
-    private void Damage()
-    {
-
-        if (damagePermission == false)
-        {
-            float Timerok = Time.time - (reservGhostTime + damageTime);
-            if (Timerok >= reservGhostTime)
-            {
-                damagePermission = true;
-            }
-        }
-
-        if (damage != 0)
-        {
-            soundSCR.PlaySound(soundSCR.sounds[3]);
-            damagePermission = false;
-            Healch.HitPoints = healch - damage;
-            healch = healch - damage;
-            damage = 0;
-            if (damagerPosition.x > trans.position.x)
-            {
-                rb.linearVelocity = new Vector2(rb.linearVelocityX, 0);
-                rb.AddForce(new Vector2(-kickForce, kickForce), ForceMode2D.Impulse);
-            }
-            else if (damagerPosition.x < trans.position.x)
-            {
-                rb.linearVelocity = new Vector2(rb.linearVelocityX, 0);
-                rb.AddForce(new Vector2(+kickForce, kickForce), ForceMode2D.Impulse);
-            }
-
         }
     }
 
@@ -353,19 +274,8 @@ public class Moove : MonoBehaviour
         rb.gravityScale = gravityScale;
         maxVelocityX = 8f;
         soundSCR = SoundListener.GetComponent<Sounds>();
-        Healch = GetComponent<Healch>();
-        damagePermission = true;
-        damageTime = 0;
         heroeAtack = false;
         death = false;
-        alpha = 0.7f;
-        damageSwitcher = false;
-        healch = 3;
-        damage = 0;
-        ghostTime = 0.3f;
-        reservGhostTime = 1f;
-        kickForce = 50;
-        damagerPosition = Vector3.zero;
         CheckGrounds = GetComponentInChildren<CheckGround>();
         rb = GetComponent<Rigidbody2D>();
         previousYPosition = rb.position.y;
@@ -379,13 +289,11 @@ public class Moove : MonoBehaviour
         animator.SetBool("isground", isGrounded);
         animator.SetBool("isOnPlatform", isOnPlatform);
         timeFallPassed = Time.time - timeGroundOut;
-        Damage();
         Run();
         maxVelocity();
         Jump();
         JumpAnim();
         ZYOn();
-        GhostTimer();
         HeroeAtack();
     }
 

@@ -3,6 +3,7 @@ using UnityEngine;
 public class thorns : MonoBehaviour
 {
     Moove mooveScript;
+    DamageManager damageManager;
     GameObject Heroe;
     Transform trans;
     public float raycastDistance;
@@ -15,14 +16,14 @@ public class thorns : MonoBehaviour
     {
         Collider2D collider = collision.collider;
 
-        if (collider.name == "Legs" && mooveScript.damagePermission == true)
+        if (collider.name == "Legs" && damageManager.damagePermission == true)
         {
-            mooveScript.damage = thornsDamage;
-            mooveScript.damagerPosition = thornsDamagePosition;
+            damageManager.damage = thornsDamage;
+            damageManager.damagerPosition = thornsDamagePosition;
 
-            mooveScript.damageTime = Time.time;
+            damageManager.damageTime = Time.time;
             mooveScript.runDisabler = true;
-            mooveScript.damageSwitcher = true;
+            damageManager.damageSwitcher = true;
 
         }
     }
@@ -32,14 +33,14 @@ public class thorns : MonoBehaviour
         Debug.DrawRay(trans.position, Vector2.up * raycastDistance, Color.red);
         foreach (RaycastHit2D hit in hitsLeft)
         {
-            if (hit.collider.name == "Legs" && mooveScript.damagePermission == true)
+            if (hit.collider.name == "Legs" && damageManager.damagePermission == true)
             {
-                mooveScript.damage = thornsDamage;
-                mooveScript.damagerPosition = thornsDamagePosition;
+                damageManager.damage = thornsDamage;
+                damageManager.damagerPosition = thornsDamagePosition;
 
-                mooveScript.damageTime = Time.time;
+                damageManager.damageTime = Time.time;
                 mooveScript.runDisabler = true;
-                mooveScript.damageSwitcher = true;
+                damageManager.damageSwitcher = true;
 
             }
         }
@@ -52,6 +53,7 @@ public class thorns : MonoBehaviour
         if (Heroe != null)
         {
             mooveScript = Heroe.GetComponent<Moove>();
+            damageManager = Heroe.GetComponent<DamageManager>();
         }
         trans = GetComponent<Transform>();
         thornsDamage = 1;
