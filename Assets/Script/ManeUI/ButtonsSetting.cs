@@ -41,12 +41,11 @@ public class ButtonsSetting : MonoBehaviour
 
         if (nextLvlNumber < SceneManager.sceneCountInBuildSettings)
         {
-            Debug.Log("Текущая сцена" + currentSceneNumber + "Номер следующей" + nextLvlNumber);
             SceneManager.LoadScene(nextLvlNumber);
         }
         else
         {
-            Debug.Log("Сцены не существует");
+            Debug.Log("Р’С‹ РЅР° РїРѕСЃР»РµРґРЅРµРј СѓСЂРѕРІРЅРµ");
         }
     }
     private void Start()

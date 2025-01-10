@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{868EB479-59EB-2C95-EB20-4283124D23FC}</ProjectGuid>
+    <ProjectGuid>{4107332A-C25A-CA9F-20C9-90A701A9CEE6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Tilemap.Editor</AssemblyName>
@@ -1224,23 +1224,23 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.TestRunner">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{B4B4D2D1-5D6F-2FBB-3DF6-CDB6860CB37E}</Project>
+      <Project>{458CB9B5-849F-7299-33E9-EC9AFF3AA6DD}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{B4C383D4-FCF6-4A3E-9581-76771D43D750}</Project>
+      <Project>{3EEA89CF-803D-3334-2BC1-AF6D86B2010E}</Project>
       <Name>UnityEngine.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{3A4E9EB8-0EF5-6154-EC3B-7606479E9B9B}</Project>
-      <Name>UnityEngine.TestRunner</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{F2FFA710-FA19-EAA1-BDD4-BC088B91AC33}</Project>
-      <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

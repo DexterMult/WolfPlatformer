@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5AA90FDE-A3F1-E862-F894-E23C82D50E14}</ProjectGuid>
+    <ProjectGuid>{0FFDFCE9-5DF9-D930-E86E-7C3720A52DFD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Tilemap.Extras.Editor</AssemblyName>
@@ -1126,27 +1126,27 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
-      <Project>{611E4F89-BA2A-6C51-D713-9BEB80D391FC}</Project>
+      <Project>{3BB2DA41-0157-4FC2-F345-D4578EA73D08}</Project>
       <Name>Unity.2D.Tilemap.Extras</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj">
-      <Project>{868EB479-59EB-2C95-EB20-4283124D23FC}</Project>
+      <Project>{4107332A-C25A-CA9F-20C9-90A701A9CEE6}</Project>
       <Name>Unity.2D.Tilemap.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{B4B4D2D1-5D6F-2FBB-3DF6-CDB6860CB37E}</Project>
+      <Project>{458CB9B5-849F-7299-33E9-EC9AFF3AA6DD}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{B4C383D4-FCF6-4A3E-9581-76771D43D750}</Project>
+      <Project>{3EEA89CF-803D-3334-2BC1-AF6D86B2010E}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{3A4E9EB8-0EF5-6154-EC3B-7606479E9B9B}</Project>
+      <Project>{FFE105DB-E2BE-B578-3BCB-D3B9AEFAFAEE}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{F2FFA710-FA19-EAA1-BDD4-BC088B91AC33}</Project>
+      <Project>{CB4917C8-C0FF-02EB-648D-8816CC96DD56}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

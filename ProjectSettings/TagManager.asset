@@ -11,6 +11,12 @@ TagManager:
   - EnemyTag
   - BunTag
   - PlatformTag
+  - POneWayTag
+  - ActorTag
+  - WallTag
+  - PDestroyTag
+  - Confiner2DTag
+  - CinemachineTag
   layers:
   - Default
   - TransparentFX
@@ -20,8 +26,8 @@ TagManager:
   - UI
   - Heroe
   - GroundLayer
-  - 
-  - 
+  - ActorLayer
+  - WallLayer
   - 
   - 
   - 

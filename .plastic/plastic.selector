@@ -1,4 +1,3 @@
 repository "platformer@ZOLOTIST@cloud"
   path "/"
-    br "/main"
-    co "/main"
+    smartbranch "/main"

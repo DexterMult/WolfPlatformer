@@ -2,66 +2,27 @@ using UnityEngine;
 
 public class thorns : MonoBehaviour
 {
-    Moove mooveScript;
-    DamageManager damageManager;
-    GameObject Heroe;
-    Transform trans;
-    public float raycastDistance;
-    public int thornsDamage;
-    public Vector2 thornsDamagePosition;
+    private HealthMonitor healthMonitor;
+    private GroundChecker groundChecker;
+    private int damage = 1;
 
-
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Collider2D collider = collision.collider;
-
-        if (collider.name == "Legs" && damageManager.damagePermission == true)
+        if (collision.CompareTag("ActorTag"))
         {
-            damageManager.damage = thornsDamage;
-            damageManager.damagerPosition = thornsDamagePosition;
-
-            damageManager.damageTime = Time.time;
-            mooveScript.runDisabler = true;
-            damageManager.damageSwitcher = true;
-
-        }
-    }
-     private void RaycastUpChecker()
-    {
-        RaycastHit2D[] hitsLeft = Physics2D.RaycastAll(trans.position, Vector2.up, raycastDistance);
-        Debug.DrawRay(trans.position, Vector2.up * raycastDistance, Color.red);
-        foreach (RaycastHit2D hit in hitsLeft)
-        {
-            if (hit.collider.name == "Legs" && damageManager.damagePermission == true)
+            groundChecker = collision.GetComponent<GroundChecker>();
+            if (groundChecker.isGhost == false && groundChecker.isDeath == false)
             {
-                damageManager.damage = thornsDamage;
-                damageManager.damagerPosition = thornsDamagePosition;
-
-                damageManager.damageTime = Time.time;
-                mooveScript.runDisabler = true;
-                damageManager.damageSwitcher = true;
-
+                groundChecker.SetIsDamageHorizontalSide(collision.transform.position, GetComponentInParent<Transform>().position); //определяет с какой стороны Enemy от героя
+                groundChecker.SetIsDamage(true);
+                groundChecker.SetIsGhost(true);
+                groundChecker.SetIsKickFall(true);
+                healthMonitor.SetDamage(damage);
             }
         }
     }
-
     void Start()
     {
-        raycastDistance = 0.35f;
-        Heroe = GameObject.Find("Heroe");
-        if (Heroe != null)
-        {
-            mooveScript = Heroe.GetComponent<Moove>();
-            damageManager = Heroe.GetComponent<DamageManager>();
-        }
-        trans = GetComponent<Transform>();
-        thornsDamage = 1;
-        thornsDamagePosition = trans.position;
-    }
-
-    void Update()
-    {
-        RaycastUpChecker();
+        healthMonitor = GameObject.Find("HealthMonitor").GetComponent<HealthMonitor>();
     }
 }

@@ -2,79 +2,75 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class SoundLines : MonoBehaviour, IPointerDownHandler, IDragHandler
+public class SoundLines : MonoBehaviour
 {
-    public bool isSound;
-    public GameObject AudioSorceObject;
-    public Image fillImage; // ������ �� ��������� Image
-    private RectTransform rectTransform;
-    private float normalizedX;
+	public Image image;
+	private bool isDragging = false; // Флаг для отслеживания, перетаскивается ли мышь
 
-    public Image soundLine;
-    public Image musicLine;
+	private void OnEnable()
+	{
+		image.fillAmount = PlayerPrefs.GetFloat("musicVolume"); // При активации окна Setting устанавливаем длину линии в соответствии с сохранением
+	}
+	private void Update()
+	{
+		// Проверяем, нажата ли левая кнопка мыши
+		if (Input.GetMouseButtonDown(0))
+		{
+			// Начинаем перетаскивание, если мышь на элементе UI
+			isDragging = IsMouseOverImage();
+		}
 
-    private AudioSource[] sorceSprings;
+		// Проверка, отпущена ли левая кнопка мыши
+		if (Input.GetMouseButtonUp(0))
+		{
+			isDragging = false; // Останавливаем перетаскивание
+		}
 
+		// Если мышь перетаскивается, меняем fillAmount
+		if (isDragging)
+		{
+			ChangeFillAmountMusic();
+		}
+	}
 
-    void Start()
-    {
-        sorceSprings = AudioSorceObject.GetComponents<AudioSource>();
+	private bool IsMouseOverImage()
+	{
+		// Проверка, находится ли мышь над элементом Image
+		Vector2 mousePos = Input.mousePosition;
+		RectTransform rectTransform = image.GetComponent<RectTransform>();
+		return RectTransformUtility.RectangleContainsScreenPoint(rectTransform, mousePos);
+	}
 
-        rectTransform = GetComponent<RectTransform>();
-        if (isSound == true)
-        {
-            normalizedX = PlayerPrefs.GetFloat("soundVolume");
-            SoundVolume();
-            fillImage.fillAmount = Mathf.Clamp01(normalizedX);
-        }
-        else if (isSound == false)
-        {
-            normalizedX = PlayerPrefs.GetFloat("musicVolume");
-            MusicVolume();
-            fillImage.fillAmount = Mathf.Clamp01(normalizedX);
-        }
-    }
+	private void ChangeFillAmountMusic()
+	{
+		// Получаем позицию мыши в локальных координатах
+		Vector2 mousePos = Input.mousePosition;
+		RectTransform rectTransform = image.GetComponent<RectTransform>();
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        UpdateFillAmount(eventData);
-    }
+		Vector2 localPoint;
+		RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, mousePos, null, out localPoint);
 
-    public void OnDrag(PointerEventData eventData)
-    {
-        UpdateFillAmount(eventData);
-    }
+		// Вычисляем значение fillAmount на основе позиции относительно размера RectTransform
+		float fillAmount;
 
-    public void MusicVolume()
-    {
-        sorceSprings[1].volume = normalizedX;
-        PlayerPrefs.SetFloat("musicVolume", normalizedX);
-        Debug.Log(PlayerPrefs.GetFloat("musicVolume"));
-    }
-
-    public void SoundVolume()
-    {
-        sorceSprings[0].volume = normalizedX;
-        PlayerPrefs.SetFloat("soundVolume", normalizedX);
-    }
-
-    private void UpdateFillAmount(PointerEventData eventData)
-    {
-        // �������� ������� ������� ������������ RectTransform
-        Vector2 localPoint;
-        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, eventData.position, eventData.pressEventCamera, out localPoint))
-        {
-            // ����������� ����������
-            normalizedX = (localPoint.x / rectTransform.rect.width) + 0.5f; // �������� � ��������� [0, 1]
-            fillImage.fillAmount = Mathf.Clamp01(normalizedX); // ������������� �������� fill amount
-            if (isSound == true)
-            {
-                SoundVolume();
-            }
-            else if (isSound == false)
-            {
-                MusicVolume();
-            }
-        }
-    }
+		// Если тип изображения "Filled" - Horizontal
+		if (image.type == Image.Type.Filled && image.fillMethod == Image.FillMethod.Horizontal)
+		{
+			fillAmount = Mathf.Clamp01((localPoint.x + (rectTransform.rect.width / 2)) / rectTransform.rect.width);
+			PlayerPrefs.SetFloat("musicVolume", fillAmount);//каждый раз сохраняем громкость музыки
+			PlayerPrefs.Save();
+			SoundEvents.SetMusicVolume();
+		}
+		// Если тип изображения "Filled" - Vertical
+		else if (image.type == Image.Type.Filled && image.fillMethod == Image.FillMethod.Vertical)
+		{
+			fillAmount = Mathf.Clamp01((localPoint.y + (rectTransform.rect.height / 2)) / rectTransform.rect.height);
+		}
+		else
+		{
+			fillAmount = 0; // По умолчанию, если тип другой
+		}
+		// Устанавливаем значение fillAmount
+		image.fillAmount = fillAmount;
+	}
 }

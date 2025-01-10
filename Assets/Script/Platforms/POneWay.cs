@@ -5,6 +5,7 @@ public class POneWay : MonoBehaviour
 {
     [SerializeField]
     private Moove moove;
+    public Jump Jump;
 
     void Start()
     {
@@ -15,7 +16,7 @@ public class POneWay : MonoBehaviour
         if (collision.gameObject.CompareTag("HeroeTag"))
         {
             moove.isOnPlatform = true;
-            moove.jumpCounter = 0;
+            Jump.jumpCounter = 0;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)

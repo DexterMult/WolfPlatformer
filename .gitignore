@@ -24,3 +24,20 @@
 [Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
+[Aa]ssets/**/*.meta
+[Aa]ssets/**/Library/
+[Aa]ssets/**/Temp/
+[Aa]ssets/**/Obj/
+[Aa]ssets/**/Build/
+[Aa]ssets/**/Logs/
+[Aa]ssets/**/PlayerData/
+[Aa]ssets/**/PersistentDataPath/
+[Aa]ssets/**/StreamingAssets/
+[Aa]ssets/**/*.csproj
+[Aa]ssets/**/*.sln
+[Aa]ssets/**/*.suo
+[Aa]ssets/**/*.userprefs
+
+# OS generated files
+.DS_Store
+Thumbs.db

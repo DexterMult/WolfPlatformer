@@ -18,7 +18,6 @@ public class ButtonsManeMenu : MonoBehaviour
         settingsPanel.SetActive(true);
         lvlPanel.SetActive(false);
     }
-
     public void ShowLvlPanel()
     {
         mainMenuPanel.SetActive(false);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PStandart : MonoBehaviour
 {
-
+    public Jump Jump;
     public float speed;
     Vector3 targetPos;
 
@@ -24,7 +24,6 @@ public class PStandart : MonoBehaviour
 
     private void Awake()
     {
-        movementController = GameObject.FindGameObjectWithTag("HeroeTag").GetComponent<Moove>();
 
         wayPoints = new Transform[ways.transform.childCount];
         for (int i = 0; i < ways.gameObject.transform.childCount; i++)
@@ -43,7 +42,6 @@ public class PStandart : MonoBehaviour
     private void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-        movementController.pDirection = moveDirection;
         if (transform.position == targetPos)
         {
             NextPoint();
@@ -80,31 +78,7 @@ public class PStandart : MonoBehaviour
     {
         moveDirection = (targetPos - transform.position).normalized;
     }
-    public Vector3 GetVelicity()
-    {
-        return moveDirection * speed;
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("HeroeTag"))
-        {
-            collision.transform.parent = this.transform;
-            movementController.isOnPlatform = true;
-            movementController.platform = this;
-            movementController.jumpCounter = 0;
-            movementController.pSpeed = speed;
-            heroRB.gravityScale = 30f;
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("HeroeTag"))
-        {
-            collision.transform.parent = null;
-            movementController.isOnPlatform = false;
-            movementController.maxVelocityX = 8;
-            heroRB.gravityScale = 5f;
-        }
-    }
+
+
 }
 

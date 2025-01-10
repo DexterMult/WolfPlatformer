@@ -34,7 +34,7 @@ public class DamageManager : MonoBehaviour
         {
             soundSCR.PlaySound(soundSCR.sounds[3]);
             damagePermission = false;
-            Healch.HitPoints = healch - damage;
+            //Healch.HitPoints = healch - damage;
             healch = healch - damage;
             damage = 0;
             if (damagerPosition.x > trans.position.x)

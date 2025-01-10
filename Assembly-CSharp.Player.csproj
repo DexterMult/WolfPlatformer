@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{ACC417BE-3762-F435-0E28-544D73C8AE77}</ProjectGuid>
+    <ProjectGuid>{07484A52-811C-E698-B9AE-C4801FCB7994}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,17 +63,28 @@
   <ItemGroup>
     <Compile Include="Assets\Script\CameraFollow.cs" />
     <Compile Include="Assets\Script\RedHud\EndGameTrigger.cs" />
+    <Compile Include="Assets\Script\TextBubble\DialogHandler.cs" />
+    <Compile Include="Assets\Script\Platforms\PDestroy\Spawner.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\RendererFeatures\DepthBlit\DepthBlitEdgePass.cs" />
     <Compile Include="Assets\Script\Parallax\ParallaxBackground.cs" />
     <Compile Include="Assets\Script\Parallax\ParallaxCamera.cs" />
+    <Compile Include="Assets\Script\Enemy\Arrow\ArrowSpawner.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\RendererFeatures\DepthBlit\DepthBlitCopyDepthPass.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\CameraStacking\3D Skybox\Scripts\SkyboxCamera.cs" />
+    <Compile Include="Assets\Script\Platforms\PDestroy\PDestroyRight.cs" />
+    <Compile Include="Assets\Script\Actor\GroundChecker.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP RenderGraph Samples\MRT\MrtRendererFeature.cs" />
+    <Compile Include="Assets\Script\Heroe\BounceOffEnemy.cs" />
     <Compile Include="Assets\Script\Enemy\Mushroom\AtackMushroom.cs" />
+    <Compile Include="Assets\Script\Actor\ActorFlip.cs" />
     <Compile Include="Assets\Script\ManeMenu\SelectedLVL.cs" />
+    <Compile Include="Assets\Script\Traps\ThornsUpDown\ThornsUpDown.cs" />
     <Compile Include="Assets\Script\Parallax\ParallaxLayer.cs" />
+    <Compile Include="Assets\Script\Actor\Idle.cs" />
+    <Compile Include="Assets\Script\Heroe\Jump.cs" />
     <Compile Include="Assets\Script\ManeUI\Timer.cs" />
-    <Compile Include="Assets\Script\Moove.cs" />
+    <Compile Include="Assets\Script\Actor\ParentSetter.cs" />
+    <Compile Include="Assets\Script\Heroe\HeroUnparent.cs" />
     <Compile Include="Assets\Script\Enemy\IEnemy.cs" />
     <Compile Include="Assets\Script\cat_scene_script.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\RendererFeatures\DistortTunnel\DistortTunnelPass_CopyColor.cs" />
@@ -81,54 +92,91 @@
     <Compile Include="Assets\Script\Platforms\PStandart.cs" />
     <Compile Include="Assets\Script\ManeUI\StartActivePanels.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\LensFlares\Scripts\ScreenSpacePlacement.cs" />
+    <Compile Include="Assets\Script\Actor\UnParent.cs" />
     <Compile Include="Assets\Script\HeroeLegs.cs" />
+    <Compile Include="Assets\Script\Neutral\HealthMonitor.cs" />
+    <Compile Include="Assets\Script\Actor\JumpDown.cs" />
+    <Compile Include="Assets\Script\Platforms\PDestroy\PDestroyLeft.cs" />
     <Compile Include="Assets\Script\Bonus\BonusMov.cs" />
+    <Compile Include="Assets\Script\Actor\JumpFall.cs" />
+    <Compile Include="Assets\Script\Enemy\Mushroom\Mushroom\MushAtack.cs" />
+    <Compile Include="Assets\Script\Actor\JumpUp.cs" />
     <Compile Include="Assets\Script\CheckGround.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP RenderGraph Samples\RendererList\RendererListRenderFeature.cs" />
+    <Compile Include="Assets\Script\Actor\JumpLeftOrRight.cs" />
+    <Compile Include="Assets\Script\Enemy\Hedgehog\AtackHedgehog.cs" />
+    <Compile Include="Assets\Script\Heroe\Flip.cs" />
+    <Compile Include="Assets\Script\Actor\Jumping.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\RendererFeatures\BlitToRTHandle\BlitToRTHandleRendererFeature.cs" />
+    <Compile Include="Assets\Script\Actor\Stats.cs" />
+    <Compile Include="Assets\Script\ManeUI\PieChanger.cs" />
     <Compile Include="Assets\Script\ManeUI\LVLChoice.cs" />
+    <Compile Include="Assets\Script\Enemy\Mushroom\Mushroom\MushRun.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\RendererFeatures\BlitToRTHandle\BlitToRTHandlePass.cs" />
     <Compile Include="Assets\Script\Enemy\Mushroom\MooveMushroom.cs" />
     <Compile Include="Assets\Script\Save\SavedSistem.cs" />
     <Compile Include="Assets\Script\LegsAtack.cs" />
     <Compile Include="Assets\Script\ManeMenu\LVLStatistic.cs" />
+    <Compile Include="Assets\Script\Traps\ThornsUpDown\ThornsDestroy.cs" />
+    <Compile Include="Assets\Script\Enemy\Raven\FindActor.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP RenderGraph Samples\FramebufferFetch\FrameBufferFetchRenderFeature.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\RendererFeatures\DistortTunnel\DistortTunnelPass_Distort.cs" />
+    <Compile Include="Assets\Script\Heroe\WalkingAirSwitch.cs" />
+    <Compile Include="Assets\Script\Enemy\Arrow\ArrowRun.cs" />
     <Compile Include="Assets\Script\ManeMenu\SoundLinesManeMenu.cs" />
     <Compile Include="Assets\Script\Sounds\Sounds.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\RendererFeatures\DepthBlit\DepthBlitDepthOnlyPass.cs" />
+    <Compile Include="Assets\Script\Bonus\BonusesChecker.cs" />
+    <Compile Include="Assets\Script\Enemy\Raven\RunRaven.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP RenderGraph Samples\GbufferVisualization\GbufferVisualizationRendererFeature.cs" />
     <Compile Include="Assets\Script\ManeMenu\StartGameMenu.cs" />
     <Compile Include="Assets\Script\PausedGame.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP RenderGraph Samples\Blit w. FrameData\BlitRendererFeature.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\SharedAssets\Scripts\CheckAssignedRenderPipelineAsset.cs" />
+    <Compile Include="Assets\Script\Enemy\Mushroom\Mushroom\MushDestroy.cs" />
     <Compile Include="Assets\Script\ManeMenu\SceneLoader.cs" />
+    <Compile Include="Assets\Script\Enemy\Raven\DeathRaven.cs" />
     <Compile Include="Assets\Script\RedHud\EndGameTime.cs" />
     <Compile Include="Assets\Script\ManeUI\ButtonsSetting.cs" />
     <Compile Include="Assets\Shaders\OrderInLayer.cs" />
-    <Compile Include="Assets\Script\BonusesChecker.cs" />
     <Compile Include="Assets\Script\Platforms\POneWay.cs" />
     <Compile Include="Assets\Script\RedHud\EndGameCoins.cs" />
+    <Compile Include="Assets\Script\Heroe\JumpAnim.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\RendererFeatures\KeepFrame\KeepFrameFeature.cs" />
     <Compile Include="Assets\Script\RedHud\StarsController.cs" />
+    <Compile Include="Assets\Script\Heroe\SetParent.cs" />
+    <Compile Include="Assets\Script\Platforms\ThornsWall\ThornsAtack.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\RendererFeatures\DistortTunnel\DistortTunnelPass_Tunnel.cs" />
+    <Compile Include="Assets\Script\Actor\AnimationSwitcher.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\RendererFeatures\DepthBlit\DepthBlitFeature.cs" />
+    <Compile Include="Assets\Script\Enemy\Raven\AtackRaven.cs" />
     <Compile Include="Assets\Script\Traps\ITrapable.cs" />
     <Compile Include="Assets\Script\Traps\thorns.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\SharedAssets\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Script\ManeMenu\ButtonsManeMenu.cs" />
+    <Compile Include="Assets\Script\Heroe\Moove.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP RenderGraph Samples\GlobalGbuffers\GlobalGbuffersRendererFeature.cs" />
     <Compile Include="Assets\Script\ManeMenu\SoundLines.cs" />
     <Compile Include="Assets\Script\textPanelScript.cs" />
+    <Compile Include="Assets\Script\Heroe\DamageManager.cs" />
+    <Compile Include="Assets\Script\Heroe\SpeedLimiter.cs" />
+    <Compile Include="Assets\Script\TextBubble\EventTrigger.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP RenderGraph Samples\UnsafePass\UnsafePassRenderFeature.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP RenderGraph Samples\TextureReference w. FrameData\TextureRefRendererFeature.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP RenderGraph Samples\Blit\CopyRenderFeature.cs" />
+    <Compile Include="Assets\Script\RedHud\FlipRaven.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP RenderGraph Samples\BlitWithMaterial\BlitAndSwapColorRendererFeature.cs" />
+    <Compile Include="Assets\Script\Enemy\Hedgehog\RunHedgehog.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP RenderGraph Samples\OutputTexture\OutputTextureRendererFeature.cs" />
     <Compile Include="Assets\Script\ManeUI\Healch.cs" />
     <Compile Include="Assets\Script\Platforms\CheckingTheHeight.cs" />
+    <Compile Include="Assets\Script\Actor\GhostColorChange.cs" />
     <Compile Include="Assets\Script\Enemy\Mushroom\RaycastLeftRightDetection.cs" />
+    <Compile Include="Assets\Script\TextBubble\CharacterBubble.cs" />
     <Compile Include="Assets\Script\Death.cs" />
+    <Compile Include="Assets\Script\Platforms\PGhost\PGhost.cs" />
+    <Compile Include="Assets\Script\Platforms\PDestroy\PDestroy.cs" />
+    <Compile Include="Assets\Script\Actor\Run.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP RenderGraph Samples\Compute\ComputeRendererFeature.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -954,131 +1002,131 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.RenderPipelines.Universal.2D.Runtime.Player.csproj">
-      <Project>{D314334A-0F70-0336-EEB4-560F373A2EBD}</Project>
+      <Project>{8570E552-C42B-4D3E-90C6-67A71B93EABB}</Project>
       <Name>Unity.RenderPipelines.Universal.2D.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InputSystem.ForUI.Player.csproj">
-      <Project>{26D4EED2-4B67-A1C6-32E2-A2DE060000E5}</Project>
+      <Project>{EE8B3DC6-9730-ABB3-D1A4-188F5A2A4DCD}</Project>
       <Name>Unity.InputSystem.ForUI.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.Player.csproj">
-      <Project>{E6802467-8863-0078-AD4A-57FB94378CDA}</Project>
+      <Project>{3FA1D31F-9F33-F984-17EB-FD1F47BB823C}</Project>
       <Name>Unity.RenderPipeline.Universal.ShaderLibrary.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.Player.csproj">
-      <Project>{D41DE42A-7EE3-8121-93D9-AA05BE624959}</Project>
+      <Project>{D074EEF6-5B8A-C058-DB85-8EA69BE611EC}</Project>
       <Name>Unity.RenderPipelines.Universal.Shaders.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.IK.Runtime.Player.csproj">
-      <Project>{5208523A-6EA4-491F-9513-199598F736BE}</Project>
+      <Project>{15F7120C-D080-F425-111F-1E3A334D5869}</Project>
       <Name>Unity.2D.IK.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.SpriteShape.Runtime.Player.csproj">
-      <Project>{ED362D39-AADE-9636-4708-DF97362D70CB}</Project>
+      <Project>{C8514970-91A7-F14D-12C6-D64B873743DC}</Project>
       <Name>Unity.2D.SpriteShape.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Shared.Player.csproj">
-      <Project>{54D65B4B-889A-77EA-E66F-EC07DE636F49}</Project>
+      <Project>{38A98C96-F56E-F9F5-34DB-BA4597D9EBD9}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime.Shared.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Player.csproj">
-      <Project>{3AC80D12-7BF7-603E-3BFB-EC228C643C82}</Project>
+      <Project>{5A293306-4507-5059-8506-DC69ADA76ABD}</Project>
       <Name>Unity.Timeline.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
-      <Project>{69FC84A7-58C3-129D-018A-4FC93F5D1AAC}</Project>
+      <Project>{FF91BB41-5C6E-F429-5475-47B9388DD88F}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.Player.csproj">
-      <Project>{60C33793-CC4B-804B-F4A7-4821807F7736}</Project>
+      <Project>{D6053938-A5B0-F079-F01F-E98CB5B612F0}</Project>
       <Name>Unity.RenderPipelines.Core.ShaderLibrary.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Splines.Player.csproj">
-      <Project>{93DE600E-9914-9A38-216D-4C03617A095C}</Project>
+      <Project>{04905D5C-161A-0781-0F42-9A47827671DB}</Project>
       <Name>Unity.Splines.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.GPUDriven.Runtime.Player.csproj">
-      <Project>{35B4403F-C173-96D7-E0D1-4C8114E93363}</Project>
+      <Project>{B4269BFE-F830-2324-FF6D-7CDD41FDCD9A}</Project>
       <Name>Unity.RenderPipelines.GPUDriven.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Cinemachine.Player.csproj">
-      <Project>{11AD84C4-398C-CA11-1092-9C82C22FF484}</Project>
+      <Project>{48FFE9D4-4061-2D92-B29A-89C81128DFB2}</Project>
       <Name>Unity.Cinemachine.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Collections.Player.csproj">
-      <Project>{BFB32CD9-ECE8-1848-7224-2002157888D2}</Project>
+      <Project>{23F448A3-0899-112F-0E24-D65C79836388}</Project>
       <Name>Unity.Collections.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.Player.csproj">
-      <Project>{DD0FFD57-8A50-9D84-C52F-BA6AF2C55FD4}</Project>
+      <Project>{20CA66AC-D04D-D5E8-CD42-C76E532A33AB}</Project>
       <Name>Unity.VisualScripting.Core.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InternalAPIEngineBridge.001.Player.csproj">
-      <Project>{75544FF2-9425-041D-1C6A-4A3ACF5BAE5B}</Project>
+      <Project>{4B6E0DE8-D3AA-A000-4D25-5577244FAA5A}</Project>
       <Name>Unity.InternalAPIEngineBridge.001.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Config.Runtime.Player.csproj">
-      <Project>{6AFBA73C-6CF9-748A-B35E-53A0EF441EBC}</Project>
+      <Project>{384B9356-F4AD-D896-3716-31A1EA794454}</Project>
       <Name>Unity.RenderPipelines.Universal.Config.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Runtime.Player.csproj">
-      <Project>{6230E421-4BDE-26D8-EDD5-401019293F03}</Project>
+      <Project>{D8E7AF5C-37F1-9C2B-A309-59D182320772}</Project>
       <Name>Unity.2D.Animation.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
-      <Project>{9894783F-5FC8-261F-117A-B8067792D362}</Project>
+      <Project>{8B53F734-E761-1F78-FDFD-F948C7B24E61}</Project>
       <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Multiplayer.Center.Common.Player.csproj">
-      <Project>{8E35271B-6B39-37BA-591D-13C6C3210116}</Project>
+      <Project>{DB0CD6E8-569D-5515-C777-43E7134C42C9}</Project>
       <Name>Unity.Multiplayer.Center.Common.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
-      <Project>{290DF2A5-EEE9-922E-5DE2-E98BD6B06627}</Project>
+      <Project>{CBC1D19E-94B2-5AB2-6FF3-640669975303}</Project>
       <Name>Unity.TextMeshPro.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Tilemap.Extras.Player.csproj">
-      <Project>{3B9F38FF-5114-15E8-F631-146B3AEBF388}</Project>
+      <Project>{13444F60-6352-E0B9-E021-63A3CCF43592}</Project>
       <Name>Unity.2D.Tilemap.Extras.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Common.Runtime.Player.csproj">
-      <Project>{56D7665E-50EE-679C-2E1F-5E6871CE0FD4}</Project>
+      <Project>{8B9CC136-9B0F-FCAC-8EFC-FCEB91D63475}</Project>
       <Name>Unity.2D.Common.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.Player.csproj">
-      <Project>{8794B22E-19F4-A839-0CB2-D89C795F33CD}</Project>
+      <Project>{194698CE-D32B-3A5C-D593-C1BF4082EDCC}</Project>
       <Name>Unity.Mathematics.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.Player.csproj">
-      <Project>{614625AE-3709-EB8D-1AD5-DF2756FC9C31}</Project>
+      <Project>{E78A2512-5E39-A42B-D380-5B8CA49863C8}</Project>
       <Name>Unity.RenderPipelines.Universal.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
-      <Project>{8B601073-A427-01EF-E74E-3364BBD5E599}</Project>
+      <Project>{A82F4B44-A79D-088F-7D5D-1E87A453EB75}</Project>
       <Name>Unity.VisualScripting.State.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.PixelPerfect.Player.csproj">
-      <Project>{0DC74079-F00D-9F3D-7FD1-78EC8CDD406E}</Project>
+      <Project>{8BBE6977-2310-CA87-924C-78839387B3B6}</Project>
       <Name>Unity.2D.PixelPerfect.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Burst.Player.csproj">
-      <Project>{61685400-D75E-9662-01FA-FE51ED84C7D5}</Project>
+      <Project>{D66C1E39-0173-86D0-20A1-00184E7BA673}</Project>
       <Name>Unity.Burst.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Player.csproj">
-      <Project>{377F1316-04BB-005E-E4C4-37A0B3BE5411}</Project>
+      <Project>{54C0818C-5105-BD1E-0CC8-AC08C142426E}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.Player.csproj">
-      <Project>{4D41987F-F595-CBCE-5263-57593033FF88}</Project>
+      <Project>{5E9F4D3F-C9E9-8EAD-A802-7DE1ED7D75B5}</Project>
       <Name>Unity.VisualScripting.Flow.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Rendering.LightTransport.Runtime.Player.csproj">
-      <Project>{2FD477C4-76D2-51E4-3FF0-5E8F30ED1605}</Project>
+      <Project>{5C62F89B-8005-EF5C-093D-8A95611FD0FA}</Project>
       <Name>Unity.Rendering.LightTransport.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InputSystem.Player.csproj">
-      <Project>{7A1C4628-CA13-ED44-07D1-ADB13E9FF4D6}</Project>
+      <Project>{FAB2A1C1-ABF3-3189-C959-92DE58DF573A}</Project>
       <Name>Unity.InputSystem.Player</Name>
     </ProjectReference>
   </ItemGroup>
