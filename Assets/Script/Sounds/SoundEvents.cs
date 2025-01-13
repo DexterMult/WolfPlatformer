@@ -14,6 +14,8 @@ public class SoundEvents : MonoBehaviour
 	public static event Action ActionWalk;
 	public static event Action ActionStartGame;
 	public static event Action ActionHowling;
+	public static event Action ActionPausedMusic;
+	public static event Action ActionUnPausedMusic;
 
 	public static event Action ActionChangeMusicVolume;
 	public static event Action ActionChangeSoundVolume;
@@ -82,6 +84,14 @@ public class SoundEvents : MonoBehaviour
 	public static void SetActionHowling()
 	{
 		ActionHowling.Invoke();
+	}
+	public static void SetActionPausedMusic()
+	{
+		ActionPausedMusic?.Invoke();
+	}
+	public static void SetActionUnPausedMusic()
+	{
+		ActionUnPausedMusic?.Invoke();
 	}
 
 }

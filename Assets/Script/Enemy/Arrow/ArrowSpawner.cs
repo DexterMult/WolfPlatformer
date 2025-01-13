@@ -3,22 +3,22 @@ using UnityEngine;
 
 public class ArrowSpawner : MonoBehaviour
 {
-    public GameObject objectToSpawn; // Префаб объекта для спавна
-    private Vector2 localSpawnPosition; // Локальная позиция для спавна
+    public GameObject objectToSpawn; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+    private Vector2 localSpawnPosition; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     private float localSpawnOffset;
 
 
-    private float firstSpawnDelay;
-    private float StandardSpawnDelay;
+    [SerializeField]private float firstSpawnDelay;
+    [SerializeField]private float StandardSpawnDelay;
 
 
     void SpawnObject()
     {
-        // Спавним объект в локальных координатах относительно родителя
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         GameObject spawnedObject = Instantiate(objectToSpawn, transform.TransformPoint(localSpawnPosition), transform.rotation);
 
         spawnedObject.GetComponent<Collider2D>().enabled = false;
-        // Устанавливаем родителем текущий объект
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         spawnedObject.transform.SetParent(transform);
     }
 
@@ -31,8 +31,6 @@ public class ArrowSpawner : MonoBehaviour
     }
     void Start()
     {
-        firstSpawnDelay = 1f;
-        StandardSpawnDelay = 3f;
         localSpawnOffset = 0.75f;
         localSpawnPosition = new Vector2(-localSpawnOffset, 0);
         StartCoroutine(StartSpawn());

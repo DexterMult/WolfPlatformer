@@ -30,8 +30,6 @@ public class Sounds : MonoBehaviour
 
 	private void Start()
 	{
-
-
 		PlayMusic(sounds[0]);
 		StartCoroutine(PlaySoundAfterDelay());
 		StartCoroutine(PlaySoundAfterDelayHowling());
@@ -46,6 +44,8 @@ public class Sounds : MonoBehaviour
 		SoundEvents.ActionWalk += PlayWalk;
 		SoundEvents.ActionStartGame += PlayStartGame;
 		SoundEvents.ActionHowling += PlayHowling;
+		SoundEvents.ActionPausedMusic += PausedMusicAudioSorce;
+		SoundEvents.ActionUnPausedMusic += UnPausedMusicAudioSorce;
 	}
 	private void OnEnable()
 	{
@@ -61,6 +61,8 @@ public class Sounds : MonoBehaviour
 		SoundEvents.ActionChangeSoundVolume -= SetSoundVolume;
 		SoundEvents.ActionChangeWalkVolume -= SetWalkVolume;
 		SoundEvents.ActionChangeBackVolume -= SetBackVolume;
+		SoundEvents.ActionPausedMusic -= PausedMusicAudioSorce;
+		SoundEvents.ActionUnPausedMusic -= UnPausedMusicAudioSorce;
 
 		SoundEvents.ActionJump -= PlayJump;
 		SoundEvents.ActionDeath -= PlayDeath;
@@ -88,6 +90,20 @@ public class Sounds : MonoBehaviour
 			SetMusicVolume();
 			isStartVolumChange = true;
 		}
+	}
+	private void PausedMusicAudioSorce()
+	{
+			if (MusicAudioSorce.isPlaying == true)
+			{
+				MusicAudioSorce.Pause();
+			}
+	}
+	private void UnPausedMusicAudioSorce()
+	{
+			if (MusicAudioSorce.isPlaying == false)
+			{
+				MusicAudioSorce.UnPause();
+			}
 	}
 	private void SetStartSoundVolumeChange()
 	{
@@ -174,7 +190,7 @@ public class Sounds : MonoBehaviour
 	}
 	private IEnumerator PlaySoundAfterDelayHowling()
 	{
-		int timeDelay = Random.Range(3, 15);
+		int timeDelay = Random.Range(10, 15);
 		yield return new WaitForSeconds(timeDelay);
 		SoundEvents.SetActionHowling();
 	}

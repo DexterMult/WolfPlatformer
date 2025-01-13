@@ -99,6 +99,7 @@
     <Compile Include="Assets\Script\CatScenes\TextBubble\CharacterBubble.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\RendererFeatures\DistortTunnel\DistortTunnelPass_CopyColor.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\RendererFeatures\DistortTunnel\DistortTunnelRendererFeature.cs" />
+    <Compile Include="Assets\Script\Enemy\Frog\FrogJump.cs" />
     <Compile Include="Assets\Script\Platforms\PStandart.cs" />
     <Compile Include="Assets\Script\Enemy\Mushroom\MushDestroy.cs" />
     <Compile Include="Assets\Script\ManeUI\StartActivePanels.cs" />
@@ -167,12 +168,14 @@
     <Compile Include="Assets\Script\Traps\ITrapable.cs" />
     <Compile Include="Assets\Script\Traps\thorns.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\SharedAssets\Scripts\FirstPersonController.cs" />
+    <Compile Include="Assets\Script\Enemy\Frog\FrogAtack.cs" />
     <Compile Include="Assets\Script\ManeMenu\ButtonsManeMenu.cs" />
     <Compile Include="Assets\Script\Heroe\Moove.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP RenderGraph Samples\GlobalGbuffers\GlobalGbuffersRendererFeature.cs" />
     <Compile Include="Assets\Script\ManeMenu\SoundLines.cs" />
     <Compile Include="Assets\Script\Heroe\DamageManager.cs" />
     <Compile Include="Assets\Script\Heroe\SpeedLimiter.cs" />
+    <Compile Include="Assets\Script\Platforms\СarouselPlatform\Test2.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP RenderGraph Samples\UnsafePass\UnsafePassRenderFeature.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP RenderGraph Samples\TextureReference w. FrameData\TextureRefRendererFeature.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP RenderGraph Samples\Blit\CopyRenderFeature.cs" />
@@ -187,6 +190,7 @@
     <Compile Include="Assets\Script\Platforms\PGhost\PGhost.cs" />
     <Compile Include="Assets\Script\Platforms\PDestroy\PDestroy.cs" />
     <Compile Include="Assets\Script\Actor\Run.cs" />
+    <Compile Include="Assets\Script\Enemy\Frog\FrogDestroy.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP RenderGraph Samples\Compute\ComputeRendererFeature.cs" />
   </ItemGroup>
   <ItemGroup>

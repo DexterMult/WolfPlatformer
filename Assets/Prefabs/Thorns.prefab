@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 3986123880860594581}
   - component: {fileID: 7168735528623073198}
   - component: {fileID: 7733286140304415523}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Thorns
   m_TagString: PlatformTag
   m_Icon: {fileID: 0}
@@ -296,20 +296,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 3113296030350256850}
     m_ColliderPaths:
-    - - X: 5527220
-        Y: 4000598
-      - X: -4472780
-        Y: 4000598
-      - X: -4472780
-        Y: -4124402
-      - X: 5527220
-        Y: -4124402
+    - - X: 5527191
+        Y: 4000597
+      - X: -4472809
+        Y: 4000597
+      - X: -4472809
+        Y: -4124403
+      - X: 5527191
+        Y: -4124403
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.552722, y: 0.4100598}
-      - {x: -0.447278, y: 0.4100598}
-      - {x: -0.447278, y: -0.40244022}
-      - {x: 0.552722, y: -0.40244022}
+    - - {x: 0.5527191, y: 0.4100597}
+      - {x: -0.4472809, y: 0.4100597}
+      - {x: -0.4472809, y: -0.4024403}
+      - {x: 0.5527191, y: -0.4024403}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0
   m_UseDelaunayMesh: 0

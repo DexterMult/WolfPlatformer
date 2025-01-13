@@ -28,8 +28,8 @@ TagManager:
   - GroundLayer
   - ActorLayer
   - WallLayer
-  - 
-  - 
+  - Enemy1
+  - Enemy2
   - 
   - 
   - 

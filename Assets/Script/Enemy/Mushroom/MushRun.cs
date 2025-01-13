@@ -5,7 +5,7 @@ public class MushRun : MonoBehaviour
 {
     private Collider2D collider2;
     private MushDestroy mushDestroy;
-    private float speed;
+    [SerializeField]private float speed;
     private Rigidbody2D rigidbody2;
 
     private bool isGround;
@@ -55,7 +55,6 @@ public class MushRun : MonoBehaviour
     {
         rayLRDistance = 0.6f;
         rayDownDistance = 1f;
-        speed = 5f;
         rigidbody2 = GetComponent<Rigidbody2D>();
         collider2 = GetComponent<Collider2D>(); 
     }

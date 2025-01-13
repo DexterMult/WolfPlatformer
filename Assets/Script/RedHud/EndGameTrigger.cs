@@ -12,25 +12,25 @@ public class EndGameTrigger : MonoBehaviour
 	public PieChanger pieChanger; //получаем результат пирожков
 	public TextMeshProUGUI pieResultTMP;
 	public PieChanger bonusesChecker;
-	
+
 	public Image noActiveStar1;
 	public Image noActiveStar2;
 	public Image noActiveStar3;
 	public Image ActiveStar1;
 	public Image ActiveStar2;
 	public Image ActiveStar3;
-	
+
 	private int coinsFinalResult;
-	
+
 	private void ShowPieResult()
 	{
 		pieResultTMP.text = pieChanger.pie.ToString();
 	}
-	private void GainCoin ()
+	private void GainCoin()
 	{
 		coinsFinalResult = bonusesChecker.pie;
 	}
-	
+
 	private int finalStarsResult; //Итоговое кол-во пирожков
 
 	private void OnCollisionEnter2D(Collision2D collision)
@@ -45,21 +45,21 @@ public class EndGameTrigger : MonoBehaviour
 			SavedSistem.SetCoinsResult(coinsFinalResult);
 			SavedSistem.SavedAllGame();
 			PausedGame.PauseGame();
-			
+
 		}
 	}
 
-// Поворот красной шапочки к ГГ
+	// Поворот красной шапочки к ГГ
 	private void RedHudRotation()
 	{
 		if (Actor != null)
 		{
 			Vector2 ActorPosition;
 			Vector2 RedHudPosition;
-			
+
 			ActorPosition = new Vector2(Actor.transform.position.x, Actor.transform.position.y);
 			RedHudPosition = new Vector2(transform.position.x, transform.position.y);
-			
+
 			if (ActorPosition.x < RedHudPosition.x)
 			{
 				transform.localScale = new Vector2(1, 1);
@@ -82,7 +82,7 @@ public class EndGameTrigger : MonoBehaviour
 	private void StarsDemonstration()
 	{
 		GetStarsResult();
-		
+
 		if (finalStarsResult == 0)
 		{
 			noActiveStar1.gameObject.SetActive(true);
@@ -126,7 +126,7 @@ public class EndGameTrigger : MonoBehaviour
 			ActiveStar3.gameObject.SetActive(true);
 		}
 	}
-// Деактивация звезд на старте
+	// Деактивация звезд на старте
 	private void StarsOnStartNoActive()
 	{
 		noActiveStar1.gameObject.SetActive(false);
@@ -140,11 +140,14 @@ public class EndGameTrigger : MonoBehaviour
 
 	private void Start()
 	{
-		PausedGame.ResumeGame();
 		StarsOnStartNoActive();
 		Actor = GameObject.Find("Actor");
 		coinsFinalResult = 0;
 		bonusesChecker = GameObject.FindAnyObjectByType<PieChanger>();
+	}
+	private void OnEnable()
+	{
+		PausedGame.ResumeGame();
 	}
 	private void Update()
 	{

@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7a6cc6969649c644a19c475e87eefc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 3
   rayLRDistance: 0
   layerMask:
     serializedVersion: 2

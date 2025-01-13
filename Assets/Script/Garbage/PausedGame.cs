@@ -2,14 +2,45 @@ using UnityEngine;
 
 public class PausedGame : MonoBehaviour
 {
-    public void PauseGame()
-    {
-        Time.timeScale = 0f;
-    }
+	private GameObject soundListener;
+	private AudioSource[] audioSources;
+	private void GetAllAudioSources()
+	{
+		soundListener = GameObject.Find("SoundListener");
+		audioSources = soundListener.GetComponents<AudioSource>();
+	}
 
-    public void ResumeGame()
-    {
-        Time.timeScale = 1f; 
-    }
+	private void PausedAllSounds()
+	{
+		GetAllAudioSources();
+		foreach (AudioSource audioSource in this.audioSources)
+		{
+			if (audioSource != null)
+			{
+				audioSource.Pause();
+			}
+		}
+	}
+	private void UnPausedAllSounds()
+	{
+		foreach (AudioSource audioSource in this.audioSources)
+		{
+			if (audioSource != null)
+			{
+				audioSource.UnPause();
+			}
+		}
+	}
+	
+	public void PauseGame()
+	{
+		SoundEvents.SetActionPausedMusic();
+		Time.timeScale = 0f;
+	}
 
+	public void ResumeGame()
+	{
+		SoundEvents.SetActionUnPausedMusic();
+		Time.timeScale = 1f;
+	}
 }
