@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -12,6 +13,7 @@ public class FrogJump : MonoBehaviour
 	private Vector2 jumpDirection;
 	private bool isGround = false;
 	private Animator animator;
+	[SerializeField] private float startJumpDelay = 0;
 
 	private Rigidbody2D rb;
 
@@ -64,11 +66,17 @@ public class FrogJump : MonoBehaviour
 		isGround = false;
 		animator.SetInteger("Jump", 1);
 	}
+	private IEnumerator JumpDelay()
+	{
+		yield return new WaitForSeconds(startJumpDelay);
+		Jump();
+		startJumpDelay = 0;
+	}
 	private void MakeAllAction()
 	{
 		SetSpeed();
 		SetDirection();
-		Jump();
+		StartCoroutine(JumpDelay());
 	}
 	private void OnTriggerEnter2D(Collider2D other)
 	{
@@ -76,8 +84,8 @@ public class FrogJump : MonoBehaviour
 		{
 			isGround = true;
 			animator.SetInteger("Jump", 0);
-			Debug.Log("Коллизия");
 		}
 	}
+	
 
 }

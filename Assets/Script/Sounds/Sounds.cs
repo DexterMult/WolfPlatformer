@@ -7,6 +7,7 @@ public class Sounds : MonoBehaviour
 	public AudioSource audioSorce;
 	public AudioSource MusicAudioSorce;
 	public AudioSource WalkAudioSorce;
+	public AudioSource WalkAudioSorce2;
 	public AudioSource BackAudioSorce;
 	private bool isStartVolumChange = false; //было ли изменено значение громкости МУЗЫКИ в начале?
 	private bool isStartSoundVolumeChange = false; //было ли изменено значение громкости ЗВУКОВ в начале?
@@ -27,6 +28,10 @@ public class Sounds : MonoBehaviour
 	{
 		WalkAudioSorce.PlayOneShot(clip, volume);
 	}
+	public void PlaySoundWalk2(AudioClip clip, float volume = 1f, bool destroyed = false)
+	{
+		WalkAudioSorce2.PlayOneShot(clip, volume);
+	}
 
 	private void Start()
 	{
@@ -46,6 +51,9 @@ public class Sounds : MonoBehaviour
 		SoundEvents.ActionHowling += PlayHowling;
 		SoundEvents.ActionPausedMusic += PausedMusicAudioSorce;
 		SoundEvents.ActionUnPausedMusic += UnPausedMusicAudioSorce;
+		SoundEvents.ActionMiniWaterSplash += PlayWaterWalk;
+		SoundEvents.ActionBigEnteriWaterSplash += PlayWaterEnter;
+		SoundEvents.ActionBigExitWaterSplash += PlayWaterExit;
 	}
 	private void OnEnable()
 	{
@@ -76,6 +84,9 @@ public class Sounds : MonoBehaviour
 		SoundEvents.ActionWalk -= PlayWalk;
 		SoundEvents.ActionStartGame -= PlayStartGame;
 		SoundEvents.ActionHowling -= PlayHowling;
+		SoundEvents.ActionMiniWaterSplash -= PlayWaterWalk;
+		SoundEvents.ActionBigEnteriWaterSplash -= PlayWaterEnter;
+		SoundEvents.ActionBigExitWaterSplash -= PlayWaterExit;
 	}
 	private void Update()
 	{
@@ -93,17 +104,17 @@ public class Sounds : MonoBehaviour
 	}
 	private void PausedMusicAudioSorce()
 	{
-			if (MusicAudioSorce.isPlaying == true)
-			{
-				MusicAudioSorce.Pause();
-			}
+		if (MusicAudioSorce.isPlaying == true)
+		{
+			MusicAudioSorce.Pause();
+		}
 	}
 	private void UnPausedMusicAudioSorce()
 	{
-			if (MusicAudioSorce.isPlaying == false)
-			{
-				MusicAudioSorce.UnPause();
-			}
+		if (MusicAudioSorce.isPlaying == false)
+		{
+			MusicAudioSorce.UnPause();
+		}
 	}
 	private void SetStartSoundVolumeChange()
 	{
@@ -122,6 +133,34 @@ public class Sounds : MonoBehaviour
 	private void PlayWalk()
 	{
 		PlaySoundWalk(sounds[2]);
+	}
+	private void PlayWaterWalk()
+	{
+		void PlayWaterWalk1()
+		{
+			PlaySoundWalk(sounds[13], Random.Range(0.2f, 1f));
+		}
+		void PlayWaterWalk2()
+		{
+			PlaySoundWalk2(sounds[14], Random.Range(0.2f, 1f));
+		}
+		int randomNumber = Random.Range(0, 2);
+		if (randomNumber == 0)
+		{
+			PlayWaterWalk1();
+		}
+		else if (randomNumber == 1)
+		{
+			PlayWaterWalk2();
+		}
+	}
+	private void PlayWaterEnter()
+	{
+		PlaySound(sounds[15], Random.Range(0.5f,1f));
+	}
+	private void PlayWaterExit()
+	{
+		PlaySound(sounds[16], Random.Range(0.5f,1f));
 	}
 	private void PlayHit()
 	{

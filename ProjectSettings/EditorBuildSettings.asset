@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LVL4.unity
     guid: 3f93acf90586ffb4fba9784f70a1ccbe
+  - enabled: 1
+    path: Assets/Scenes/LVL5.unity
+    guid: c3c405ba91893eb438cf8615142eff43
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

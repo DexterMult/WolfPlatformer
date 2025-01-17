@@ -16,11 +16,27 @@ public class SoundEvents : MonoBehaviour
 	public static event Action ActionHowling;
 	public static event Action ActionPausedMusic;
 	public static event Action ActionUnPausedMusic;
+	public static event Action ActionMiniWaterSplash;
+	public static event Action ActionBigEnteriWaterSplash;
+	public static event Action ActionBigExitWaterSplash;
 
 	public static event Action ActionChangeMusicVolume;
 	public static event Action ActionChangeSoundVolume;
 	public static event Action ActionChangeWalkVolume;
 	public static event Action ActionChangeBackVolume;
+	
+	public static void SetActionMiniWaterSplash()
+	{
+		ActionMiniWaterSplash?.Invoke();
+	}
+	public static void SetActionBigEnteriWaterSplash()
+	{
+		ActionBigEnteriWaterSplash?.Invoke();
+	}
+	public static void SetActionBigExitWaterSplash()
+	{
+		ActionBigExitWaterSplash?.Invoke();
+	}
 	public static void SetActionJump()
 	{
 		ActionJump?.Invoke();

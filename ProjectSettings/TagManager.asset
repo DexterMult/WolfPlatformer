@@ -17,6 +17,8 @@ TagManager:
   - PDestroyTag
   - Confiner2DTag
   - CinemachineTag
+  - WaterTag
+  - ParticleTag
   layers:
   - Default
   - TransparentFX

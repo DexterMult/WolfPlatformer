@@ -11,12 +11,15 @@ public class Jumping : MonoBehaviour
 	{
 		if (Input.GetButtonDown("Jump"))
 		{
-			if (groundChecker.isDeath == false)
+			if (groundChecker.isDeath == false && groundChecker.isFall == false)
 			{
 				if ((groundChecker.isGround == true || groundChecker.isPOneWey == true || groundChecker.isPStandart == true || groundChecker.isJumpUP == true) && groundChecker.isDamage == false)
 				{
 					SoundEvents.SetActionJump();
-					dust.Play();
+					if (groundChecker.isWater == false)
+					{
+						dust.Play();
+					}
 					rigidbody2.linearVelocityY = 0f;
 					rigidbody2.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 					groundChecker.SetFall(false);
@@ -28,12 +31,15 @@ public class Jumping : MonoBehaviour
 				else if (canDoubleJump)
 				{
 					SoundEvents.SetActionJump();
-					dust.Play();
+					if (groundChecker.isWater == false)
+					{
+						dust.Play();
+					}
 					rigidbody2.linearVelocityY = 0f;
 					rigidbody2.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 					groundChecker.SetFall(false);
 					groundChecker.SetJump(true);
-					canDoubleJump = false; 
+					canDoubleJump = false;
 				}
 			}
 		}

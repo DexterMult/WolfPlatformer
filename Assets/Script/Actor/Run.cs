@@ -28,7 +28,14 @@ public class Run : MonoBehaviour
 	}
 	private void SetWalkSound()
 	{
-		SoundEvents.SetActionWalk();
+		if (groundChecker.isWater == false)
+		{
+			SoundEvents.SetActionWalk();
+		}
+		else if (groundChecker.isWater == true)
+		{
+			SoundEvents.SetActionMiniWaterSplash();
+		}
 	}
 
 	void Start()

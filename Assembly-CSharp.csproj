@@ -136,10 +136,13 @@
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP RenderGraph Samples\FramebufferFetch\FrameBufferFetchRenderFeature.cs" />
     <Compile Include="Assets\Script\Enemy\Frog2\EnableTrigger.cs" />
     <Compile Include="Assets\Script\Garbage\LegsAtack.cs" />
+    <Compile Include="Assets\Script\Actor\WaterSplash.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\RendererFeatures\DistortTunnel\DistortTunnelPass_Distort.cs" />
     <Compile Include="Assets\Script\Heroe\WalkingAirSwitch.cs" />
+    <Compile Include="Assets\Script\Neutral\SecretEntrance\ShowHideTileMap.cs" />
     <Compile Include="Assets\Script\Enemy\Arrow\ArrowRun.cs" />
     <Compile Include="Assets\Script\ManeMenu\SoundLinesManeMenu.cs" />
+    <Compile Include="Assets\Script\Neutral\ParticleCleaner.cs" />
     <Compile Include="Assets\Script\Tramplin\Tramplin.cs" />
     <Compile Include="Assets\Script\Sounds\Sounds.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\RendererFeatures\DepthBlit\DepthBlitDepthOnlyPass.cs" />

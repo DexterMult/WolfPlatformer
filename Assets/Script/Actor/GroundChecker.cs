@@ -1,4 +1,5 @@
 using System.Collections;
+using NUnit.Framework;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -8,9 +9,11 @@ public class GroundChecker : MonoBehaviour
 	private Collider2D collidPlatform;
 	private bool isDamageReturnPermisssion;
 	private bool isGhostReturnPermisssion;
+	private bool isWaterPermission;
 
 	[Header("Поверхность")]
 	public bool isGround;
+	public bool isWater;
 	public bool isPStandart;
 	public bool isPOneWey;
 	public bool isFall;
@@ -54,6 +57,11 @@ public class GroundChecker : MonoBehaviour
 			collidPlatform = collision.GetComponent<Collider2D>();
 		}
 
+		if (collision.CompareTag("WaterTag") && isWaterPermission == true)
+		{
+			isWater = true;
+			isWaterPermission = false;
+		}
 	}
 
 	private void OnTriggerExit2D(Collider2D collision)
@@ -72,6 +80,11 @@ public class GroundChecker : MonoBehaviour
 		{
 			isPOneWey = false;
 			IsFallChecker();
+		}
+		if (collision.CompareTag("WaterTag") && isWaterPermission == false)
+		{
+			isWater = false;
+			isWaterPermission = true;
 		}
 	}
 
@@ -228,6 +241,8 @@ public class GroundChecker : MonoBehaviour
 	}
 	private void Start()
 	{
+		isWaterPermission = true;
+		isWater = false;
 		playSoundHitPermission = true;
 		playSoundDeathPermission = true;
 		isKickFall = false;

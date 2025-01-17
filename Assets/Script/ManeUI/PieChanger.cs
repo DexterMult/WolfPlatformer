@@ -13,6 +13,11 @@ public class PieChanger : MonoBehaviour
 		pie = pie + 1;
 		scoreTMP.text = pie.ToString();
 	}
+	private void SetScoreBascet()
+	{
+		pie = pie + 5;
+		scoreTMP.text = pie.ToString();
+	}
 	void Start()
 	{
 		scoreTMP = GetComponent<TextMeshProUGUI>();
@@ -22,13 +27,22 @@ public class PieChanger : MonoBehaviour
 		foreach (GameObject bun in allBun)
 		{
 			bonusesChecker = bun.GetComponent<BonusesChecker>();
-			bonusesChecker.EatPieEvent += SetScore;
+			if (bonusesChecker.isBacket == false)
+			{
+				bonusesChecker.EatPieEvent += SetScore;
+			}
+			else if (bonusesChecker.isBacket == true)
+			{
+				bonusesChecker.EatPieEvent += SetScoreBascet;
+			}
 		}
 	}
 	private void OnDestroy()
 	{
-		if(bonusesChecker != null){
+		if (bonusesChecker != null)
+		{
 			bonusesChecker.EatPieEvent -= SetScore;
+			bonusesChecker.EatPieEvent -= SetScoreBascet;
 		}
 	}
 }

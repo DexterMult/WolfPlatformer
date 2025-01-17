@@ -158,11 +158,11 @@ public class CharacterBubble : MonoBehaviour
 		if (gameObject.activeSelf == true)
 		{
 			transform.position = new Vector2(actor.transform.position.x, actor.transform.position.y + offset);
-			if (bubbleActorFather != null)
+			if (bubbleActorFather != null && actorFather != null)
 			{
 				bubbleActorFather.transform.position = new Vector2(actorFather.transform.position.x + offsetFatherX, actorFather.transform.position.y + offsetFatherY);
 			}
-			if (bubbleActorGrandpa != null)
+			if (bubbleActorGrandpa != null && actorGrandpa != null)
 			{
 				bubbleActorGrandpa.transform.position = new Vector2(actorGrandpa.transform.position.x, actorGrandpa.transform.position.y + offsetGranpaY);
 			}
