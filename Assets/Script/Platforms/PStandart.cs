@@ -4,81 +4,69 @@ using UnityEngine;
 
 public class PStandart : MonoBehaviour
 {
-    public Jump Jump;
-    public float speed;
-    Vector3 targetPos;
-
-    Moove movementController;
-
-    //Rigidbody2D rb;
-    Vector3 moveDirection;
-
-    public Rigidbody2D heroRB;
-    public GameObject ways;
-    public Transform[] wayPoints;
-    int pointIndex; // порядковый номер
-    int pointCount; // кол-во платформ
-    int direction = 1;
-
-    public float waitDuration;
-
-    private void Awake()
-    {
-
-        wayPoints = new Transform[ways.transform.childCount];
-        for (int i = 0; i < ways.gameObject.transform.childCount; i++)
-        {
-            wayPoints[i] = ways.transform.GetChild(i).gameObject.transform;
-        }
-    }
-
-    private void Start()
-    {
-        pointIndex = 0;
-        pointCount = wayPoints.Length;
-        targetPos = wayPoints[0].transform.position;
-        DirectionCalculate();
-    }
-    private void Update()
-    {
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-        if (transform.position == targetPos)
-        {
-            NextPoint();
-        }
-    }
+	public Jump Jump;
+	public float speed;
+	Vector3 targetPos;
 
 
-    private void NextPoint()
-    {
-        transform.position = targetPos;
-        moveDirection = Vector3.zero;
-        if (pointIndex == pointCount - 1)
-        {
-            direction = -1;
-        }
+	public Rigidbody2D heroRB;
+	public GameObject ways;
+	public Transform[] wayPoints;
+	int pointIndex;
+	int pointCount;
+	int direction = 1;
+	private bool isTargetPosition = false;
 
-        if (pointIndex == 0)
-        {
-            direction = 1;
-        }
+	public float waitDuration;
 
-        pointIndex += direction;
-        targetPos = wayPoints[pointIndex].transform.position;
+	private void Awake()
+	{
+		wayPoints = new Transform[ways.transform.childCount];
+		for (int i = 0; i < ways.gameObject.transform.childCount; i++)
+		{
+			wayPoints[i] = ways.transform.GetChild(i).gameObject.transform;
+		}
+	}
 
-        StartCoroutine(WaitNextPoint());
-    }
+	private void Start()
+	{
+		pointIndex = 0;
+		pointCount = wayPoints.Length;
+		targetPos = wayPoints[0].transform.position;
+	}
+	private void Update()
+	{
+		transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+		if (transform.position == targetPos && isTargetPosition == false)
+		{
+			isTargetPosition = true;
+			StartCoroutine(MoveWait(waitDuration));
+		}
+	}
 
-    IEnumerator WaitNextPoint()
-    {
-        yield return new WaitForSeconds(waitDuration);
-        DirectionCalculate();
-    }
-    private void DirectionCalculate()
-    {
-        moveDirection = (targetPos - transform.position).normalized;
-    }
 
+	private void NextPoint()
+	{
+		transform.position = targetPos;
+		if (pointIndex == pointCount - 1)
+		{
+			direction = -1;
+		}
 
+		if (pointIndex == 0)
+		{
+			direction = 1;
+		}
+
+		pointIndex += direction;
+		targetPos = wayPoints[pointIndex].transform.position;
+	}
+
+	IEnumerator MoveWait(float delay) //Р—Р°РґРµСЂР¶РєР° РїРµСЂРµРґ РѕС‚РїСЂР°РІР»РµРЅРёРµРј РІ СЃР»РµРґ. С‚РѕС‡РєСѓ
+	{
+		yield return new WaitForSeconds(delay);
+		isTargetPosition = false;
+		NextPoint();
+	}
 }
 

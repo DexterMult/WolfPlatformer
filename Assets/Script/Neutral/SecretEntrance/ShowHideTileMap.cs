@@ -19,7 +19,6 @@ public class ShowHideTileMap : MonoBehaviour
 		{
 			isEntred = true;
 			ToggleRenderer();
-			Debug.Log("Зашел");
 		}
 	}
 	private void OnTriggerExit2D(Collider2D other)
@@ -28,7 +27,6 @@ public class ShowHideTileMap : MonoBehaviour
 		{
 			isEntred = false;
 			ToggleRenderer();
-			Debug.Log("Вышел");
 		}
 	}
 }

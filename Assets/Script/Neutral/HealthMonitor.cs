@@ -3,6 +3,7 @@ using UnityEngine;
 public class HealthMonitor : MonoBehaviour
 {
 	private GroundChecker groundChecker;
+	private PausedGame pausedGame;
 	[SerializeField] private GameObject loseGamePanel;
 	public int fullHP;
 
@@ -15,6 +16,7 @@ public class HealthMonitor : MonoBehaviour
 	void Start()
 	{
 		groundChecker = GameObject.Find("Actor").GetComponent<GroundChecker>();
+		pausedGame = GameObject.Find("PausedObj").GetComponent<PausedGame>();
 		fullHP = 3;
 	}
 
@@ -23,6 +25,7 @@ public class HealthMonitor : MonoBehaviour
 		if (fullHP <= 0)
 		{
 			EnableLosePanel();
+			pausedGame.PauseGame();
 			groundChecker.isDeath = true;
 		}
 		else { groundChecker.isDeath = false; }

@@ -122,6 +122,7 @@ public class Sounds : MonoBehaviour
 		{
 			SetSoundVolume();
 			SetWalkVolume();
+			SetWalkVolume2();
 			SetBackVolume();
 			isStartSoundVolumeChange = true;
 		}
@@ -156,11 +157,11 @@ public class Sounds : MonoBehaviour
 	}
 	private void PlayWaterEnter()
 	{
-		PlaySound(sounds[15], Random.Range(0.5f,1f));
+		PlaySound(sounds[15], Random.Range(0.5f, 1f));
 	}
 	private void PlayWaterExit()
 	{
-		PlaySound(sounds[16], Random.Range(0.5f,1f));
+		PlaySound(sounds[16], Random.Range(0.5f, 1f));
 	}
 	private void PlayHit()
 	{
@@ -216,6 +217,13 @@ public class Sounds : MonoBehaviour
 	private void SetWalkVolume()
 	{
 		WalkAudioSorce.volume = PlayerPrefs.GetFloat("soundVolume") * 0.5f;
+	}
+	private void SetWalkVolume2()
+	{
+		if (WalkAudioSorce2 != null)
+		{
+			WalkAudioSorce2.volume = PlayerPrefs.GetFloat("soundVolume") * 0.5f;
+		}
 	}
 	private void SetBackVolume()
 	{
