@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 61
+  m_Name: 62
   m_Shader: {fileID: -6465566751694194690, guid: 7bb3af8cbce145f44a878b75cc247188, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -52,9 +52,9 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Deep: {r: 0.12549022, g: 0.3083451, b: 0.34901962, a: 1}
-    - _FoamColor: {r: 0.6933962, g: 0.9606196, b: 1, a: 0}
-    - _Shallow: {r: 0.24056605, g: 0.9622642, b: 0.81101006, a: 1}
+    - _Deep: {r: 0.12549019, g: 0.30834508, b: 0.3490196, a: 0.19607843}
+    - _FoamColor: {r: 0.6933962, g: 0.9606197, b: 1, a: 1}
+    - _Shallow: {r: 0, g: 0.754717, b: 0.5965427, a: 0.19607843}
     - _Speed: {r: 1, g: 0.05, b: 0, a: 0}
     - _Tiling: {r: 0.3, g: 0.6, b: 0, a: 0}
   m_BuildTextureStacks: []

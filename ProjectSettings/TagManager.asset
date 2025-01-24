@@ -19,6 +19,7 @@ TagManager:
   - CinemachineTag
   - WaterTag
   - ParticleTag
+  - EnemyRaven
   layers:
   - Default
   - TransparentFX

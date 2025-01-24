@@ -100,6 +100,7 @@
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\RendererFeatures\DistortTunnel\DistortTunnelPass_CopyColor.cs" />
     <Compile Include="Assets\Script\Traps\Mayatnik\MayatnickAtack.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\RendererFeatures\DistortTunnel\DistortTunnelRendererFeature.cs" />
+    <Compile Include="Assets\Script\Neutral\LayerOrderSwitcher.cs" />
     <Compile Include="Assets\Script\Enemy\Frog\FrogJump.cs" />
     <Compile Include="Assets\Script\Platforms\PStandart.cs" />
     <Compile Include="Assets\Script\Enemy\Mushroom\MushDestroy.cs" />
@@ -108,6 +109,7 @@
     <Compile Include="Assets\Script\Actor\UnParent.cs" />
     <Compile Include="Assets\Script\Neutral\HealthMonitor.cs" />
     <Compile Include="Assets\Script\Actor\JumpDown.cs" />
+    <Compile Include="Assets\Script\Neutral\LeverDoor\DoorLeverController.cs" />
     <Compile Include="Assets\Script\Enemy\Mushroom\MushRun.cs" />
     <Compile Include="Assets\Script\Enemy\Mushroom\MushAtack.cs" />
     <Compile Include="Assets\Script\Platforms\PDestroy\PDestroyLeft.cs" />
@@ -164,6 +166,7 @@
     <Compile Include="Assets\Particles\KillEffect\DestroyKillEffect.cs" />
     <Compile Include="Assets\Script\RedHud\StarsController.cs" />
     <Compile Include="Assets\Script\Heroe\SetParent.cs" />
+    <Compile Include="Assets\Script\Neutral\ShipMovement.cs" />
     <Compile Include="Assets\Script\Garbage\CameraFollow.cs" />
     <Compile Include="Assets\Script\Platforms\ThornsWall\ThornsAtack.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\RendererFeatures\DistortTunnel\DistortTunnelPass_Tunnel.cs" />
