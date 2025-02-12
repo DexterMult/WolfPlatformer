@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 public class PDestroyRight : MonoBehaviour
 {
     private Spawner spawner;
@@ -34,7 +35,7 @@ public class PDestroyRight : MonoBehaviour
     {
         if (transform.parent == null)
         {
-            if (collision.collider.tag != "PDestroyTag" && collision.collider.tag != "Untagged" && collision.collider.tag != "PlatformTag")
+            if (collision.transform.position.y< transform.position.y || collision.transform.tag == "Ground0" || collision.transform.tag == "PlatformTag")
             {
                 Destroy(gameObject);
             }

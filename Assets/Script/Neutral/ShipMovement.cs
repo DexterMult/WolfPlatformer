@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 public class ShipMovement : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class ShipMovement : MonoBehaviour
 		}
 	}
 
-	void Update()
+	void LateUpdate()
 	{
 		if (hasReachedPointB) return; // Если корабль достиг точки B, прекращаем выполнение Update
 
@@ -77,7 +78,11 @@ public class ShipMovement : MonoBehaviour
 	void MoveShip()
 	{
 		// Двигаем корабль к точке B
-		transform.position = Vector2.MoveTowards(transform.position, pointB.position, speed * Time.deltaTime);
+		
+		var position = Vector2.MoveTowards(transform.position, pointB.position, speed * Time.deltaTime);
+		position.x = Mathf.Round(position.x * 50)/50;
+		position.y = Mathf.Round(position.y * 50)/50;
+		transform.position = position;
 
 		// Проверяем, достиг ли корабль точки B
 		if (Vector2.Distance(transform.position, pointB.position) < 0.1f)

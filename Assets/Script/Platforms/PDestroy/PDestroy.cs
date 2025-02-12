@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PDestroy : MonoBehaviour
@@ -36,7 +37,7 @@ public class PDestroy : MonoBehaviour
     {
         if (transform.parent == null)
         {
-            if (collision.collider.tag != "PDestroyTag" && collision.collider.tag != "Untagged" && collision.collider.tag != "PlatformTag")
+            if (collision.transform.position.y< transform.position.y || collision.transform.tag == "Ground0" || collision.transform.tag == "PlatformTag")
             {
                 Destroy(gameObject);
             }
