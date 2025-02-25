@@ -12,6 +12,11 @@ public class SavedSistem : MonoBehaviour
 	private int coinsResult;
 	private int starsResult;
 
+	public void SavedComplitLVL()
+	{
+		PlayerPrefs.SetInt("ComplitLVL"+lvlNum, 1);
+	}
+
 	public void SetStarsResult(int starsResult)
 	{
 		this.starsResult = starsResult;
@@ -34,8 +39,9 @@ public class SavedSistem : MonoBehaviour
 		allTimeResult = Timer._timer;
 		timeMinutsResult = Timer._minuts;
 		timeSecundsResult = Timer._secund;
-		if (allTimeResult <= PlayerPrefs.GetFloat("allTimeResult" + lvlNum, 0))
+		if ((allTimeResult <= PlayerPrefs.GetFloat("allTimeResult" + lvlNum))|| (PlayerPrefs.GetFloat("allTimeResult") == 0))
 		{
+			PlayerPrefs.SetFloat("allTimeResult" + lvlNum, allTimeResult);
 			PlayerPrefs.SetFloat("timeMinutsResult" + lvlNum, timeMinutsResult);
 			PlayerPrefs.SetFloat("timeSecundsResult" + lvlNum, timeSecundsResult);
 		}
@@ -64,6 +70,5 @@ public class SavedSistem : MonoBehaviour
 		lvlNum = LVLChoice.sceneIndex;
 		starsController = GameObject.FindFirstObjectByType<StarsController>();
 		Timer = GameObject.FindFirstObjectByType<Timer>();
-		
 	}
 }

@@ -93994,8 +93994,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23448522a450d344face08730c084610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalCoinsResult: 40
-  normalTimeResult: 60
+  normalCoinsResult: 64
+  normalTimeResult: 55
   normalHealchResult: 2
   actualCoins: 0
   finalStarsResult: 0

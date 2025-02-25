@@ -173,6 +173,7 @@
     <Compile Include="Assets\Script\Garbage\PausedGame.cs" />
     <Compile Include="Assets\Script\Actor\AnimationSwitcher.cs" />
     <Compile Include="Assets\Samples\Universal RP\17.0.3\URP Package Samples\RendererFeatures\DepthBlit\DepthBlitFeature.cs" />
+    <Compile Include="Assets\Script\ManeMenu\DeletOverride.cs" />
     <Compile Include="Assets\Script\Enemy\Raven\AtackRaven.cs" />
     <Compile Include="Assets\Script\Traps\ITrapable.cs" />
     <Compile Include="Assets\Script\Traps\thorns.cs" />

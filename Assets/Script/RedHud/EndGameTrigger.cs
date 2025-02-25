@@ -44,6 +44,7 @@ public class EndGameTrigger : MonoBehaviour
 			StarsDemonstration();
 			SavedSistem.SetCoinsResult(coinsFinalResult);
 			SavedSistem.SavedAllGame();
+			SavedSistem.SavedComplitLVL();
 			PausedGame.PauseGame();
 
 		}
